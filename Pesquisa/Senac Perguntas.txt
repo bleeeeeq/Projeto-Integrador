@@ -1,0 +1,23 @@
+[ Justificativa do Sistema ]
+
+- Vendo um atual problema do Senac, a administração e reconhecimento de chaves, gostariamos proporcionar uma solução viável e simples para os funcionários.
+
+
+
+[ Qual o problema identificado ]
+
+- Assim como dito na resposta anterior, há um problema no gerenciamento de chaves, então pensamos numa maneira de evitar tamanha dor de cabeça, como por exemplo, o
+sumiço/perda de chaves, a falta de organização, e entre outros.
+
+
+
+[ Qual a solução proposta ]
+
+- Um site web! Ele irá permitir que os profissionais vejam se a chave está disponível e se a chave está com alguém (c/ nome da pessoa), o que irá facilitar
+na organização.
+
+
+
+[ Quais os benefícios ]
+
+- Uma melhoria geral no sistema, que irá trazer uma maior organização, mais segurança, e assim também como evitar possíveis perdas.

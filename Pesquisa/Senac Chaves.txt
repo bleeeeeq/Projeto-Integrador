@@ -1,0 +1,11 @@
+Ideia inicial
+
+[1] Será um site independente;
+[2] A entrada pode ser facilitada com um QrCode;
+[3.1] Ao entrar no site, o profissional irá se deparar com uma tabela;
+[3.2] Ao entrar no site, o profissional irá se deparar com um login que seria em base o RA (cód. do profissional) e sua respectiva senha, para daí ter acesso a tabela;
+[4] A tabela vai mostrar o andar, número da sala, se a chave está disponível, e caso não, o respectivo nome de quem está a obtém; 
+[5] Na tela de login, irá ter as opções: [RA - SENHA] [Login - Cadastro]
+[6] Na tela cadastro, só irá aceitar logins específicos, como se fosse dos grandes gerentes da empresa, no nosso caso, 4 logins (um de cada um dos integrantes do grupo)
+que permitirá o cadastro, edição, remoção, etc. de funcionários;
+[7] Um agendamento de chaves (auditório por exemplo)

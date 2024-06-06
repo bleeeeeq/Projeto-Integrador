@@ -1,0 +1,38 @@
+[Térreo]
+
+Biblioteca
+Auditório
+Projeção e aúdio
+
+-=-=-=-=-=-=-=-=-
+
+[1° andar]
+
+Almoxarifado
+Administrativo
+DML
+Espaço docente
+
+102 - Sala de aula
+103 - Sala de aula
+104 - Cozinha didática
+105 - Estética
+106 - Salão escola
+
+-=-=-=-=-=-=-=-=-
+
+[2° andar]
+
+DML
+
+201 - Sala de aula
+202 - Sala de aula
+203 - Sala de aula
+204 - Lab. Informática
+205 - Estética
+206 - Estética
+207 - Lab. Informática
+208 - Sala de aula
+209 - Sala de aula
+210 - Lab. Informática
+
