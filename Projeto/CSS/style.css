@@ -7,7 +7,10 @@
 header {
     background-color: #034C8C;
     min-height: 150px;
-    padding-top: 40px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px #3b77e6;
+    margin-inline: 0;
 }
 
 body {
@@ -19,7 +22,6 @@ body {
 }
 
 h1 {
-    text-align: center;
     font-family: 'Bebas Neue', 'Abel', 'Plus Jakarta Sans';
     color: #F28322;
     font-size: 100px;
@@ -27,10 +29,81 @@ h1 {
     font-style: normal;
 }
 
-li {
-    color: #F28322;
+nav ul{    
+    list-style-type: none; /*Tirando a marcação da lista*/
+    padding: 0;
+    margin: 0;
 }
 
-a {
-    color: #F28322;
+nav ul li{
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: rgb(253, 155, 69)
+}
+
+.dropdown-child{
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    min-width: 160px;
+}
+
+.dropdown-child li{
+    display: block;
+}
+
+.dropdown-child a{
+    color: orange;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child{
+    display: block;
+}
+
+
+table{
+    text-align: center;
+    border: 5px blue double;
+}
+
+table th{
+    border: 5px blue double;
+    color: indigo;
+    
+}
+
+/* Especificando as cores para linhas pares, também é possível trocar o "even" por odd para ser linhas ímpares! */ 
+table td:nth-child(even){
+    border: 3px green dashed;
+    background-color: antiquewhite;
+    color: indigo;
+}
+
+table td, table th{
+    border: 3px black outset;
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+    color: green;
+    font-size: 50px;
+    font-weight: 400;
 }

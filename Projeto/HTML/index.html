@@ -5,34 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senac Chaves</title>
-    <link rel="shortcut icon" href="../IMG/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../IMG/Utilitários/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/style.css">
 
 </head>
 <body>   
     <header>
         <h1>Senac Chaves</h1>
-        
-        <ul>
-            <ul>
-            <li><b>Verificar Chaves</b></li>
-            <ul>
-                <li>Tabela Estática</li>
-            </ul>
 
-            <br>
-
-            </ul>
+        <nav>
             <ul>
-                <li><b>Agendamento</b></li>
-                <ul>
-                    <li><a href="#">Tabela</a></li>
-                    <li><a href="https://github.com/bleeeeeq">Realizar Agendamento</a></li>
-                </ul>
-                <br>
+                <li class="dropdown"><a href="#">Home</a>
+                    <ul class="dropdown-child">
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="#">Atualizações</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a href="#">Agendamento</a>
+                    <ul class="dropdown-child">
+                        <li><a href="#">Tabela</a></li>
+                        <li><a href="#">Realizar agendamento</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a href="#">Verificar chaves</a>
+                    <ul class="dropdown-child">
+                        <li><a href="#">Chaves indisponíveis</a></li>
+                        <li><a href="#">Perdi minha chave</a></li>
+                    </ul>
+                </li>
             </ul>
-        </ul>
+        </nav>       
 
     </header>
+
+    <h1>Tabela de siglas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="color: red;">Siglas</th>
+                <th style="color: green;">Estados</th>
+                <th style="color: blue;">Cidades</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>MG</td>
+            <td>Minas Gerais</td>
+            <td>853</td>
+        </tr>
+        <tr>
+            <td>RJ</td>
+            <td>Rio de Janeiro</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>SP</td>
+            <td>São Paulo</td>
+            <td>645</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border: 3px black dashed; color: red"><b>Total de cidades do país</b></td>
+            <td style="border: 3px black dashed; color: red"><b>5570</b></td>
+        </tr>
+    </table>
+
+    <br><br><br>
+    <hr color="red"><hr color="green"><hr color="blue">
+    <br>
+
+    <h1>Tabela com tags semânticas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="color: red;">Sabores</th>
+                <th style="color: green;">Origem</th>
+                <th style="color: blue;">Tipo de Prato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Macarronada</td>
+                <td>Itália</td>
+                <td>Refeição</td>
+            </tr>
+            <tr>
+                <td>Mochi</td>
+                <td>Japão</td>
+                <td>Sobremesa</td>
+            </tr>           
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="border: 3px black dashed;color: red;"><b>Informações da minha cabeça</b></td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>
