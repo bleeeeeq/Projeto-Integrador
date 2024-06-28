@@ -7,18 +7,38 @@
 header {
     background-color: #034C8C;
     min-height: 150px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     box-shadow: 0 2px 4px #3b77e6;
-    margin-inline: 0;
+    ;
+    
 }
 
 body {
+    
     background-color: #98B4D4;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #323232;
     font-weight: 400;
     font-size: 20px;
+}
+
+footer{
+    background-color: #034C8C;   
+    padding: 20px 0;
+    box-shadow: 4px 2px 4px 4px #3b77e6;
+        
+    text-align: center;
+    list-style: none;
+    margin-inline: 0;
+    margin-bottom: 0;
+
+    margin-top: auto;
+    width: 100%;
+}
+
+footer ul{
+    list-style: none;
 }
 
 h1 {
@@ -31,6 +51,28 @@ h1 {
     color: #111439; 
 
 }
+
+article{
+    padding: 9px 40px 9px 40px;
+    border: 5px;
+    border-radius: 20px;
+    background-color: rgba(231, 212, 189, 0.473);
+    margin-bottom: 10px;
+}
+
+#coluna{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+header{
+    margin-bottom: 10px;
+}
+
+
 
 nav ul{    
     list-style-type: none; /*Tirando a marcação da lista*/
@@ -111,3 +153,4 @@ h1{
     font-size: 50px;
     font-weight: 400;
 }
+
