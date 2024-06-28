@@ -43,10 +43,13 @@ footer ul{
 
 h1 {
     font-family: 'Bebas Neue', 'Abel', 'Plus Jakarta Sans';
-    color: #F28322;
     font-size: 100px;
     font-weight: 400;
     font-style: normal;
+
+
+    color: #111439; 
+
 }
 
 article{
@@ -122,18 +125,19 @@ nav ul li a:hover{
 
 table{
     text-align: center;
-    border: 5px blue double;
+
+=======
+    border: 5px rgb(0, 0, 0) ;
 }
 
 table th{
-    border: 5px blue double;
+    border: 5px ;
     color: indigo;
-    
+   
 }
 
 /* Especificando as cores para linhas pares, também é possível trocar o "even" por odd para ser linhas ímpares! */ 
 table td:nth-child(even){
-    border: 3px green dashed;
     background-color: antiquewhite;
     color: indigo;
 }
@@ -145,7 +149,7 @@ table td, table th{
 
 h1{
     text-align: center;
-    color: green;
+
     font-size: 50px;
     font-weight: 400;
 }
