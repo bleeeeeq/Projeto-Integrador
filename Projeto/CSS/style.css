@@ -1,7 +1,45 @@
+/* Todas as telas */
+
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%; 
     text-align: center;
-    }
+}
+
+/* Todas as telas */
+
+/* Index */
+
+/* Index */
+
+/* Cadastro */
+.cadastro{
+    background-color: rgba(41, 91, 201, 0.201);
+    max-width: 75%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.158);
+   
+    margin-bottom: 80px;
+    flex-direction: column;
+    display: flex;
+}
+ 
+form input[type="email"]{
+    margin-bottom: 15px;
+}
+ 
+#inputEstado{
+    width: 90%;
+    margin-bottom: 15px;
+}
+ 
+.endereco{
+    width: 98%;
+    margin-bottom: 15px;
+}
+/* Cadastro */
