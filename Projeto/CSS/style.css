@@ -1,113 +1,45 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Todas as telas */
 
-header {
-    background-color: #034C8C;
-    min-height: 150px;
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    text-align: center;
+}
+
+/* Todas as telas */
+
+/* Index */
+
+/* Index */
+
+/* Cadastro */
+.cadastro{
+    background-color: rgba(41, 91, 201, 0.201);
+    max-width: 75%;
+    margin: auto;
+    margin-top: 50px;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px #3b77e6;
-    margin-inline: 0;
-}
-
-body {
-    background-color: #98B4D4;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #323232;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-h1 {
-    font-family: 'Bebas Neue', 'Abel', 'Plus Jakarta Sans';
-    font-size: 100px;
-    font-weight: 400;
-    font-style: normal;
-
-
-    color: #111439; 
-
-}
-
-nav ul{    
-    list-style-type: none; /*Tirando a marcação da lista*/
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li{
-    position: relative;
-    display: inline-block;
-}
-
-nav ul li a{
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
-nav ul li a:hover{
-    color: black;
-    background-color: rgb(253, 155, 69)
-}
-
-.dropdown-child{
-    display: none;
-    background-color: #333;
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    min-width: 160px;
-}
-
-.dropdown-child li{
-    display: block;
-}
-
-.dropdown-child a{
-    color: orange;
-    padding: 5px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-child{
-    display: block;
-}
-
-
-table{
-    text-align: center;
-
-=======
-    border: 5px rgb(0, 0, 0) ;
-}
-
-table th{
-    border: 5px ;
-    color: indigo;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.158);
    
+    margin-bottom: 80px;
+    flex-direction: column;
+    display: flex;
 }
-
-/* Especificando as cores para linhas pares, também é possível trocar o "even" por odd para ser linhas ímpares! */ 
-table td:nth-child(even){
-    background-color: antiquewhite;
-    color: indigo;
+ 
+form input[type="email"]{
+    margin-bottom: 15px;
 }
-
-table td, table th{
-    border: 3px black outset;
-    background-color: antiquewhite;
+ 
+#inputEstado{
+    width: 90%;
+    margin-bottom: 15px;
 }
-
-h1{
-    text-align: center;
-
-    font-size: 50px;
-    font-weight: 400;
+ 
+.endereco{
+    width: 98%;
+    margin-bottom: 15px;
 }
+/* Cadastro */

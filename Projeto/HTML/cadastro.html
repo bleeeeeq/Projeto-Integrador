@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="../CSS/style.css">
+
+   <title>Senac Chaves</title>
+</head>
+
+<body>
+   <!-- Icon -->
+   <nav class="navbar navbar-light" style="background-color: #ffffff;">
+      <a class="navbar-brand" href="#">
+         <img src="../IMG/Utilitários/LogoCaC.png" width=150 height="30" class="d-inline-block align-top" alt="">
+
+      </a>
+   </nav>
+   <!-- Icon -->
+
+   <!-- Home -->
+   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffb509;">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+
+            <li class="nav-item active">
+               <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
+            </li>
+
+            <li class="nav-item">
+               <a class="nav-link" href="#">Atualizações</a>
+            </li>
+
+            <li class="nav-item">
+               <a class="nav-link" href="cadastro.html">Cadastro</a>
+            </li>
+
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Chaves
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Verificar chaves</a>
+                  <a class="dropdown-item" href="#">Realizar agendamento</a>
+                  <a class="dropdown-item" href="#">Perdi minha chave</a>
+               </div>
+            </li>
+
+         </ul>
+      </div>
+   </nav>
+   <!-- Home -->
+
+   <!--Cadastro-->
+   <h1 style="text-align: center; margin-top: 55px;">CADASTRO</h1>
+   <form class="cadastro">
+      <div class="form-row">
+         <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+         </div>
+         <div class="form-group col-md-6">
+            <label for="inputPassword4">Senha</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+         </div>
+      </div>
+      <div class="form-group">
+         <label for="inputAddress">Endereço</label>
+         <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+      </div>
+      <div class="form-group">
+         <label for="inputAddress2">Endereço 2</label>
+         <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+      </div>
+      <div class="form-row">
+         <div class="form-group col-md-6">
+            <label for="inputCity">Cidade</label>
+            <input type="text" class="form-control" id="inputCity">
+         </div>
+         <div class="form-group col-md-4">
+            <label for="inputEstado">Estado</label>
+            <select id="inputEstado" class="form-control">
+               <option>AC - ACRE</option>
+               <option>AL - ALAGOAS</option>
+               <option>AP - AMAPÁ</option>
+               <option>AM - AMAZONAS</option>
+               <option>BA - BAHIA</option>
+               <option>CE - CEARÁ</option>
+               <option>DF - DISTRITO FEDERAL</option>
+               <option>ES - ESPÍRITO SANTO</option>
+               <option>GO - GOIÁS</option>
+               <option>MA - MARANHÃO</option>
+               <option>MT - MATO GROSSO</option>
+               <option>MS - MATO GROSSO DO SUL</option>
+               <option>MG - MINAS GERAIS</option>
+               <option>PA - PARÁ</option>
+               <option>PB - PARAIBA</option>
+               <option>PR - PARANÁ</option>
+               <option>PE - PERNAMBUCO</option>
+               <option>PI - PIAUÍ</option>
+               <option>RJ - RIO DE JANEIRO</option>
+               <option>RN - RIO GRANDE DO NORTE</option>
+               <option>RS - RIO GRANDE DO SUL</option>
+               <option>RO - RONDÔNIA</option>
+               <option>RR - RORAIMA</option>
+               <option>SC - SANTA CATARINA</option>
+               <option>SP - SÃO PAULO</option>
+               <option>SE - SERGIPE</option>
+               <option>TO - TOCANTINS</option>
+            </select>
+         </div>
+         <div class="form-group col-md-2">
+            <label for="inputCEP">CEP</label>
+            <input type="text" class="form-control" id="inputCEP">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+               Salvar Informações
+            </label>
+         </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+   </form>
+
+   <!--script-->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+      </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+      </script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+      </script>
+</body>
+
+</html>
