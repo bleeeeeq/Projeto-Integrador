@@ -1,11 +1,12 @@
 /* Todas as telas */
 
 footer {
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     bottom: 0;
     width: 100%; 
     text-align: center;
+    
 }
 
 /* Todas as telas */
@@ -16,7 +17,7 @@ footer {
 
 /* Cadastro */
 .cadastro{
-    background-color: rgba(41, 91, 201, 0.201);
+    background-color: rgba(104, 163, 252, 0.596);
     max-width: 75%;
     margin: auto;
     margin-top: 50px;
