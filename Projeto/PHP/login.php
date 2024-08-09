@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'database.php';
-
+ 
 if(isset($_POST['logar'])){
     $email = filter_input(INPUT_POST,'cpEmail',FILTER_SANITIZE_STRING);
     $senha = filter_input(INPUT_POST,'cpSenha',FILTER_SANITIZE_STRING);
