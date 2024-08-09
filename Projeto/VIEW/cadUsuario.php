@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
 
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
                 </li>
 
@@ -46,7 +46,7 @@
                     <a class="nav-link" href="#">Atualizações</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="cadUsuario.php">Cadastro</a>
                 </li>
 
@@ -68,7 +68,6 @@
     <!-- Home -->
 
     <!-- Cadastro -->
-    <h1 style="text-align: center; margin-top: 55px;">CADASTRO</h1>
     <form class="cadastro" action="../PHP/cadastroUsuario.php" method="post">
         <div class="form-group">
             <label for="nome">Nome</label>
@@ -94,7 +93,7 @@
 
         <div class="form-group">
             <label for="inputAddress">Endereço</label>
-            <input type="text" name="endereco" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0" required >
+            <input type="text" name="endereco" class="form-control" id="inputAddress" placeholder="Bairro Idiota, Rua dos Bobos, nº 0" required >
         </div>
 
         <div class="form-row">
