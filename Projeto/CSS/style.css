@@ -43,3 +43,20 @@ form input[type="email"]{
     margin-bottom: 15px;
 }
 /* Cadastro */
+
+/*Login*/
+.login{
+    background-color: rgba(155, 204, 253, 0.968);
+    max-width: 25%;
+    margin: auto;
+    margin-top: 300px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(231, 212, 189, 0.473);
+ 
+    margin-bottom: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+/*Login*/
