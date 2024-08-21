@@ -54,11 +54,12 @@ DROP TABLE IF EXISTS `chave`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `chave` (
   `idchave` int NOT NULL AUTO_INCREMENT,
-  `numero` int NOT NULL,
+  `numero` int DEFAULT NULL,
   `andar` varchar(20) NOT NULL,
   `descricao` varchar(45) NOT NULL,
-  PRIMARY KEY (`idchave`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`idchave`),
+  UNIQUE KEY `numero_UNIQUE` (`numero`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +68,7 @@ CREATE TABLE `chave` (
 
 LOCK TABLES `chave` WRITE;
 /*!40000 ALTER TABLE `chave` DISABLE KEYS */;
-INSERT INTO `chave` VALUES (1,0,'Térreo','Biblioteca'),(2,0,'Térreo','Auditório'),(3,0,'Térreo','Projeção e áudio'),(4,0,'1° andar','Almoxarifado'),(5,0,'1° andar','Administrativo'),(6,0,'1° andar','DML'),(7,0,'1° andar','Espaço docente'),(8,102,'1° andar','Sala de aula'),(9,103,'1° andar','Sala de aula'),(10,104,'1° andar','Cozinha didática'),(11,105,'1° andar','Estética'),(12,106,'1° andar','Salão Escola'),(13,201,'2° andar','Sala de aula'),(14,202,'2° andar','Sala de aula'),(15,203,'2° andar','Sala de aula'),(16,204,'2° andar','Lab. Informática'),(17,205,'2° andar','Estética'),(18,206,'2° andar','Estética'),(19,207,'2° andar','Lab. Informática'),(20,208,'2° andar','Sala de aula'),(21,209,'2° andar','Sala de aula'),(22,210,'2° andar','Lab. Informática');
+INSERT INTO `chave` VALUES (1,1,'Térreo','Biblioteca'),(2,2,'Térreo','Auditório'),(3,3,'Térreo','Projeção e áudio'),(4,4,'1° andar','Almoxarifado'),(5,5,'1° andar','Administrativo'),(6,6,'1° andar','DML'),(7,7,'1° andar','Espaço docente'),(8,102,'1° andar','Sala de aula'),(9,103,'1° andar','Sala de aula'),(10,104,'1° andar','Cozinha didática'),(11,105,'1° andar','Estética'),(12,106,'1° andar','Salão Escola'),(13,201,'2° andar','Sala de aula'),(14,202,'2° andar','Sala de aula'),(15,203,'2° andar','Sala de aula'),(16,204,'2° andar','Lab. Informática'),(17,205,'2° andar','Estética'),(18,206,'2° andar','Estética'),(19,207,'2° andar','Lab. Informática'),(20,208,'2° andar','Sala de aula'),(21,209,'2° andar','Sala de aula'),(22,210,'2° andar','Lab. Informática'),(23,999,'Térreo','sdfdsfs'),(24,998,'Térreo','fdogjfd');
 /*!40000 ALTER TABLE `chave` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,4 +124,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-02 11:19:43
+-- Dump completed on 2024-08-20 12:00:12
