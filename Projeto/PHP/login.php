@@ -3,13 +3,13 @@ session_start();
 include 'database.php';
  
 if(isset($_POST['logar'])){
-    $email = filter_input(INPUT_POST,'cpEmail',FILTER_SANITIZE_STRING);
+    $ra = filter_input(INPUT_POST,'cpRa',FILTER_SANITIZE_STRING);
     $senha = filter_input(INPUT_POST,'cpSenha',FILTER_SANITIZE_STRING);
        
-    if(strlen($_POST['cpEmail'])==0){
+    if(strlen($_POST['cpRa'])==0){
         echo "<script>
-            alert('Preencha o campo Email')
-            window.location.href= '../HTML/login.html'
+            alert('Preencha o campo de identificação')
+            window.location.href= '../VIEW/login.html'
             </script>";
          
         //echo "Preencha o campo email.";
@@ -17,13 +17,13 @@ if(isset($_POST['logar'])){
     else if(strlen($_POST['cpSenha'])==0){
         echo "<script>
                 alert('Preencha o campo senha')
-                window.location.href= '../HTML/login.html'
+                window.location.href= '../VIEW/login.html'
                 </script>";
         //echo "Preencha o campo senha.";
     }
     else{
-        $stmt = $conexao->prepare("select email,idusuario from usuario where senha = ? and email = ?");
-        $stmt->bind_param("ss", $senha, $email);
+        $stmt = $conexao->prepare("select ra,idusuario, nome from usuario where senha = ? and ra = ?");
+        $stmt->bind_param("ss", $senha, $ra);
         $stmt->execute();
         $result = $stmt->get_result();
  
@@ -32,16 +32,16 @@ if(isset($_POST['logar'])){
             $_SESSION['id'] = $usuario['idusuario'];
             $_SESSION['nome'] = $usuario['nome'];
             echo "<script>
-                alert ('Email verificado com sucesso! Bem vindo ao sistema, ".$usuario['nome']."!')
-                window.location.href= '../HTML/index.html'
+                alert ('Identificação verificado com sucesso! Bem vindo ao sistema, ".$usuario['nome']."!')
+                window.location.href= '../VIEW/index.php'
             </script>";
             exit;
         }
  
         else{
             echo "<script>
-                alert('Email ou Senha incorretos')
-                window.location.href= '../HTML/login.html'
+                alert('Identificação ou Senha incorretos')
+                window.location.href= '../VIEW/login.html'
                 </script>";
             exit;
         }
