@@ -13,11 +13,11 @@
             }
     </script>";
     exit();
-    }
+    
 
     $sql = "SELECT * FROM chave";
     $results = '';
-
+        }
     if(isset($_POST['numero']) || isset($_POST['andar'])){
         $numero = $_POST['numero'];
         $andar = $_POST['andar'];
@@ -58,6 +58,6 @@
     $conexao -> close();
     header ("Location: ../VIEW/tabChaves.php?");
     exit();
-
+    
 ?>
 
