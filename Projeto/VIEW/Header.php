@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
     <title>Document</title>
 </head>
 <body>
-
     
     <!-- Icon -->
     <nav class="navbar navbar-light" style="background-color: #ffffff;">
@@ -30,7 +28,7 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
+                    <a class="nav-link" href="index.php">Home<span class="sr-only">(Página atual)</span></a>
                 </li>
 
                 <li class="nav-item">
@@ -48,7 +46,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Verificar chaves</a>
-                        <a class="dropdown-item" href="#">Realizar agendamento</a>
+                        <a class="dropdown-item" href="tabChaves.php">Realizar agendamento</a>
                         <a class="dropdown-item" href="#">Perdi minha chave</a>
                     </div>
                 </li>
