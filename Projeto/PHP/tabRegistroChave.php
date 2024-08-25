@@ -8,9 +8,8 @@
                 window.location.href = '../VIEW/agendarChave.php?id=$id';
     </script>";
     exit();
-
-    
         }
+    
     if(isset($_POST['numero']) || isset($_POST['andar'])){
         $numero = $_POST['numero'];
         $andar = $_POST['andar'];
@@ -30,9 +29,7 @@
         while ($linha = $resultado -> fetch_assoc()){
             $results .=  "<tr>
                             <td>{$linha['numero']}</td>
-                            <td>{$linha['andar']}</td>
                             <td>{$linha['descricao']}</td>
-
                             <td><form action='../PHP/tabelaChaves.php' method='POST' style ='display: inline;'>
                                 <input type='hidden' name='agendar_id' value='{$linha['idchave']}'>
                                 <button type='submit' name='agendar' style='background-color: #ffb509;'>Registrar</button>
@@ -48,9 +45,8 @@
     }
 
     $_SESSION['results'] = $results;
-
     $conexao -> close();
-    header ("Location: ../VIEW/tabChaves.php?");
+    header ("Location: ../VIEW/registroChaves.php?");
     exit();
     
 ?>

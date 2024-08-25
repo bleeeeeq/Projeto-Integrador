@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/styleCadChave.css">
+    <link rel="stylesheet" href="../CSS/agendarChave.css">
     <link rel="shortcut icon" href="../IMG/Utilitários/Logo.png" type="image/x-icon">
 
     <title>Cadastrar chave</title>
@@ -78,15 +78,20 @@
     </div>
         <form class="cadastro" action="../PHP/cadastroChave.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>">
+            <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
 
             <div class="form-group">
-                <label for="numSala">Número da sala</label>
+                <label for="numSala">Número da sala:</label>
                 <input type="text" class="form-control" name="numSala" id="numSala" oninput="mascaraSala(this)" placeholder="Digite o número da sala" required value="<?php echo $numero; ?>">
             </div>
 
             <div class="form-group">
-                <label for="andar">Selecione o Andar</label>
+                <label for="nomeSala">Nome da sala:</label>
+                <input type="text" class="form-control" name="nomeSala" id="exampleInputPassword1" placeholder="Identificação da sala" required value="<?php echo $descricao; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="andar">Selecione o Andar:</label>
                 <select class="form-control" name="andar">
                     <option value="Térreo" <?php if ($andar == 'Térreo') echo 'selected'; ?>>Térreo</option>
                     <option value="1° andar" <?php if ($andar == '1° andar') echo 'selected'; ?>>1° andar</option>
@@ -94,13 +99,25 @@
                 </select>
             </div>
 
+            <div class="ItensDataHora">
             <div class="form-group">
-                <label for="nomeSala">Nome da sala</label>
-                <input type="text" class="form-control" name="nomeSala" id="exampleInputPassword1" placeholder="Identificação da sala" required value="<?php echo $descricao; ?>">
+                <label for="data">Dia Incio:</label>
+                <input type="date" name="data">
+            </div>
+
+            <div class="form-group">
+                <label for="time">Hora de Inicio:</label>
+                <input type="time" name="time">
+            </div>
+
+            <div class="form-group">
+                <label for="time2">Hora Final:</label>
+                <input type="time" name="time2">
             </div>
 
             <div id="idButton">
-                <button type="submit" name="Cadastrar" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" name="Cadastrar" class="btn btn-primary">Agendar</button>
+            </div>
             </div>
         </form>
         <!--Formulario-->

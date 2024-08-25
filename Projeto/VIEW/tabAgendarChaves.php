@@ -29,7 +29,7 @@
 <div class="bTable">
     
     <div class="container">
-        <h1>chave</h1>
+        <h1>Agendar Chave</h1>
         <form class="search-form" method="POST" action="../PHP/tabelaChaves.php">
             <input type="text" name="andar" placeholder="Andar">
             <input type="text" name="numero" placeholder="Número da Sala">

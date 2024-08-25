@@ -36,11 +36,9 @@ if (isset($_SESSION['nome'])) {
     </div>
 
         <div id="ItensMenu">
-            <a href="tabChaves.php">Registro de chaves</a>
-            <a href="#">Agendar chave</a>
+            <a href="registroChaves.php">Registro de chaves</a>
             <a href="#">Historico de chaves</a>
-            <a href="#">Perdi minha chave</a>
-            <a href="#">Cadastrar Usuário</a>
+            <a href="cadUsuario.php">Cadastrar Usuário</a>
         </div>
 
     <!--menu-->
