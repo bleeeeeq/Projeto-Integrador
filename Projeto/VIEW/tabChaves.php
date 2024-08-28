@@ -1,12 +1,12 @@
 <?php
     session_start();
-    /*if(isset($_SESSION['nome'])){
+    if(isset($_SESSION['nome'])){
         $nomeUsuario = $_SESSION['nome'];
     }
 
     else{
         header("location: login.html");
-    }*/ 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +25,10 @@
         include_once "Header.php";
     ?>
 
-
 <div class="bTable">
     
     <div class="container">
-        <h1>chave</h1>
+
         <form class="search-form" method="POST" action="../PHP/tabelaChaves.php">
             <input type="text" name="andar" placeholder="Andar">
             <input type="text" name="numero" placeholder="Número da Sala">
@@ -71,5 +70,9 @@
         </div>
     </div>
 </div>
+
+    <?php
+        include_once "Footer.php";
+    ?>
 </body>
 </html>

@@ -6,18 +6,18 @@
         $id = $_POST['agendar_id'];
         echo"<script>
             if(confirm('Você realmente deseja agendar essa chave?')){
-                window.location.href = '../VIEW/cadChave.php?id=$id';
+                window.location.href = '../VIEW/agdChave.php?id=$id';
             }
             else{
                 window.location.href = '../VIEW/tabChaves.php';
             }
     </script>";
     exit();
-    
+    }
 
     $sql = "SELECT * FROM chave";
     $results = '';
-        }
+
     if(isset($_POST['numero']) || isset($_POST['andar'])){
         $numero = $_POST['numero'];
         $andar = $_POST['andar'];
@@ -38,7 +38,6 @@
                             <td>{$linha['numero']}</td>
                             <td>{$linha['andar']}</td>
                             <td>{$linha['descricao']}</td>
-
                             <td><form action='../PHP/tabelaChaves.php' method='POST' style ='display: inline;'>
                                 <input type='hidden' name='agendar_id' value='{$linha['idchave']}'>
                                 <button type='submit' name='agendar' style='background-color: #ffb509;'>Agendar</button>
@@ -58,6 +57,5 @@
     $conexao -> close();
     header ("Location: ../VIEW/tabChaves.php?");
     exit();
-    
-?>
 
+?>
