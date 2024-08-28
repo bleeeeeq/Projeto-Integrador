@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../CSS/agendarChave.css">
     <link rel="shortcut icon" href="../IMG/Utilitários/Logo.png" type="image/x-icon">
 
-    <title>Cadastrar chave</title>
+    <title>Senac chaves</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
             $stmt->execute();
             $resultado = $stmt->get_result();
             
-            // Preenche os campos do formulário com os dados da aula
+            // Preenche os campos do formulário com os dados da chave
             if ($resultado->num_rows > 0) {
                 $linha = $resultado->fetch_assoc();
              //   $nomeUsuario = $linha['nome'];
@@ -69,14 +69,14 @@
 
         else{
             ?>
-            <h1 style="text-align:center">Cadastrar Chave</h1>
+            <h1 style="text-align:center">Registrar chave</h1>
             <?php
         }     
         $conexao->close();
         ?>
 
     </div>
-        <form class="cadastro" action="../PHP/cadastroChave.php" method="post">
+        <form class="cadastro" action="../PHP/agendarChave.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
 
@@ -102,21 +102,16 @@
             <div class="ItensDataHora">
             <div class="form-group">
                 <label for="data">Dia Incio:</label>
-                <input type="date" name="data">
+                <input type="date" name="dia">
             </div>
 
             <div class="form-group">
                 <label for="time">Hora de Inicio:</label>
-                <input type="time" name="time">
-            </div>
-
-            <div class="form-group">
-                <label for="time2">Hora Final:</label>
-                <input type="time" name="time2">
+                <input type="time" name="hora">
             </div>
 
             <div id="idButton">
-                <button type="submit" name="Cadastrar" class="btn btn-primary">Agendar</button>
+                <button type="submit" name="Registrar" class="btn btn-primary">Registrar</button>
             </div>
             </div>
         </form>
