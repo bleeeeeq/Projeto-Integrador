@@ -22,7 +22,7 @@ if(isset($_POST['logar'])){
         //echo "Preencha o campo senha.";
     }
     else{
-        $stmt = $conexao->prepare("select ra,idusuario, nome from usuario where senha = ? and ra = ?");
+        $stmt = $conexao->prepare("select ra,idusuario, nome, gerencia from usuario where senha = ? and ra = ?");
         $stmt->bind_param("ss", $senha, $ra);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -31,12 +31,13 @@ if(isset($_POST['logar'])){
             $usuario = $result->fetch_assoc();
             $_SESSION['id'] = $usuario['idusuario'];
             $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['gerencia'] = $usuario['gerencia'];
             echo "<script>
                 window.location.href= '../VIEW/index.php'
             </script>";
             exit;
         }
- 
+
         else{
             echo "<script>
                 alert('Identificação ou Senha incorretos')

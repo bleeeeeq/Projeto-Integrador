@@ -1,10 +1,10 @@
 <?php
-session_start();
-if (isset($_SESSION['nome'])) {
-    $nomeUsuario = $_SESSION['nome'];
-} else {
-    header("location: login.html");
-}
+    session_start();
+    if (isset($_SESSION['nome'])) {
+        $nomeUsuario = $_SESSION['nome'];
+    } else {
+        header("location: login.html");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,8 +24,15 @@ if (isset($_SESSION['nome'])) {
 <body>
     <!--Header-->
     <?php
-    include_once "Header.php"
+    if (isset($_SESSION['gerencia']) && $_SESSION['gerencia'] == 1) {
+        
+        include_once "HeaderGerente.php";
+    }
+    else{
+        include_once "Header.php";
+    }
     ?>
+    
     <!--Header-->
 
     <!--menu-->

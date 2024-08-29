@@ -12,6 +12,7 @@ if(isset($_POST['btnCad'])){
     $estado = filter_input(INPUT_POST, 'estado' , FILTER_SANITIZE_STRING);
     $cep = filter_input(INPUT_POST, 'cep' , FILTER_SANITIZE_STRING);
     $cpf = filter_input(INPUT_POST, 'cpf' , FILTER_SANITIZE_STRING);
+    $gerencia = filter_input(INPUT_POST, 'gerente' , FILTER_SANITIZE_STRING);
     
     if(empty($nome) || empty($email) || empty($senha) || empty($ra) || empty($endereco) || empty($cidade) || empty($estado) || empty($cep) || empty($cpf)){
         echo "<script>
@@ -39,9 +40,9 @@ if(isset($_POST['btnCad'])){
             }
 
         // Cadastra as informações no banco
-            $declaracao = $conexao->prepare("INSERT INTO `usuario`(`nome`,`email`,`senha`,`ra`,`endereco`,`cidade`,`estado`,`cep`,`cpf`)VALUES(?,?,?,?,?,?,?,?,?);");
+            $declaracao = $conexao->prepare("INSERT INTO `usuario`(`nome`,`email`,`senha`,`ra`,`endereco`,`cidade`,`estado`,`cep`,`cpf`,`gerencia`)VALUES(?,?,?,?,?,?,?,?,?,?);");
 
-            $declaracao->bind_param("sssssssss", $nome, $email, $senha, $ra, $endereco, $cidade, $estado,$cep , $cpf);
+            $declaracao->bind_param("sssssssssi", $nome, $email, $senha, $ra, $endereco, $cidade, $estado,$cep , $cpf, $gerencia);
             if ($declaracao->execute()){
                 echo" <script>
                     alert('Usuário cadastrado com sucesso');

@@ -1,7 +1,13 @@
 <?php
     session_start();
-?>
+    if(isset($_SESSION['nome'])){
+        $nomeUsuario = $_SESSION['nome'];
+    }
 
+    else{
+        header("location: login.html");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +33,9 @@
 
 
     <!-- Cadastro -->
+    <h1>Cadastro Usuário</h1>
     <form class="cadastro" action="../PHP/cadastroUsuario.php" method="post">
+
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do usuário" >
@@ -52,7 +60,7 @@
 
         <div class="form-group">
             <label for="inputAddress">Endereço</label>
-            <input type="text" name="endereco" class="form-control" id="inputAddress" placeholder="Bairro Idiota, Rua dos Bobos, nº 0" required >
+            <input type="text" name="endereco" class="form-control" id="inputAddress" placeholder="Bairro Doidos, Rua dos Bobos, nº 0" required >
         </div>
 
         <div class="form-row">
@@ -75,6 +83,11 @@
             <div class="form-group">
                 <label for="inputCPF">CPF</label>
                 <input type="text" name="cpf" class="form-control" id="inputCPF" size="27" oninput="mascaraCPF(this)" maxlength="14" required>
+            </div>
+
+            <div class="gerencia">
+                <label>Permição para o gerenciar chaves:</label>
+                <input type="checkbox" name="gerente" class="form-control" id="inputgerencia" value ="1">
             </div>
         </div>
         </div>

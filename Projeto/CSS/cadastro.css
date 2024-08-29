@@ -1,27 +1,42 @@
-.cadastro{
+.cadastro {
     background-color: rgba(104, 163, 252, 0.596);
-    max-width: 75%;
+    max-width: 85%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 40px;
     padding: 20px;
     border-radius: 30px;
     border: 2px solid rgba(0, 0, 0, 0.158);
-   
     margin-bottom: 80px;
     flex-direction: column;
     display: flex;
 }
- 
-form input[type="email"]{
+
+form input[type="email"] {
     margin-bottom: 15px;
 }
- 
-#inputEstado{
+
+#inputEstado {
     width: 90%;
     margin-bottom: 15px;
 }
- 
-.endereco{
+
+.endereco {
     width: 98%;
     margin-bottom: 15px;
+}
+
+.gerencia {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.gerencia input{
+    width: 18px;
+    margin-left: 10px;
+}
+h1{
+    margin-top: 25px;
+    text-align: center;
 }
