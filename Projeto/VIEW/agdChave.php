@@ -90,23 +90,25 @@
             </div>
 
             <div class="form-group">
-                <label for="nomeSala">Nome da sala</label>
-                <input type="text" readonly class="form-control" name="nomeSala" id="exampleInputPassword1" placeholder="Identificação da sala" required value="<?php echo $descricao; ?>">
+                <label for="nomeSala">Nome da sala 
+                    <!-- Ícone de interrogação com tooltip -->
+                    <span id="question-icon" data-toggle="tooltip" data-placement="right" title="Esta sala está disponível para agendamento apenas a partir de dois dias, pois é de uso exclusivo por reserva." style="cursor: pointer; color: #007bff; display: none;">&#63;</span>
+                </label>
+                <input type="text" readonly class="form-control" name="nomeSala" id="exampleInputPassword1" placeholder="Identificação da sala" required value="<?php echo htmlspecialchars($descricao); ?>">
             </div>
 
-            <div class="ItensDataHora">
             <div class="form-group">
                 <label for="data">Dia</label>
-                <input type="date" name="dia" class="form-control">
+                <input type="date" readonly name="data" id="dataField" class="form-control" >
             </div>
 
             <div class="form-group">
                 <label for="time">Hora de Inicio</label>
-                <input type="time" name="hora" class="form-control">
+                <input type="time" readonly name="hora" id="horaField" class="form-control">
             </div>
 
             <div id="idButton">
-                <button type="submit" name="Cadastrar" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" name="Agendar" class="btn btn-primary">CONFIRMAR</button>
             </div>
         </form>
         <!--Formulario-->
@@ -121,6 +123,61 @@
         function mascaraSala(Sala) {
             Sala.value = Sala.value.replace(/\D/g, "")
         }
+
+        // Puxar a data do sistema
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById('dataField').value = today;
+        });
+
+        // Puxando a hora do sistema
+        document.addEventListener('DOMContentLoaded', function() {
+        var now = new Date();
+        var hours = String(now.getHours()).padStart(2, '0');
+        var minutes = String(now.getMinutes()).padStart(2, '0');
+        var currentTime = hours + ':' + minutes;
+        document.getElementById('horaField').value = currentTime;
+    });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Função para obter o valor do parâmetro "id" da URL
+            function getParameterByName(name, url = window.location.href) {
+                name = name.replace(/[\[\]]/g, '\\$&');
+                const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            // Obtém o valor do parâmetro "id"
+            const id = getParameterByName('id');
+            
+            // Se o ID for 1, 2 ou 3, habilita os campos "data" e "hora" e mostra o ícone de interrogação
+            if (['1', '2', '3'].includes(id)) {
+                document.getElementById('dataField').removeAttribute('readonly');
+                document.getElementById('horaField').removeAttribute('readonly');
+                
+                // Define a data mínima para o campo "data" como dois dias a partir da data atual
+                const today = new Date();
+                const minDate = new Date(today.setDate(today.getDate() + 2));
+                const minDateString = minDate.toISOString().split('T')[0];
+                document.getElementById('dataField').setAttribute('min', minDateString);
+
+                // Mostra o ícone de interrogação
+                document.getElementById('question-icon').style.display = 'inline';
+            } else {
+                // Se o ID não for 1, 2 ou 3, garante que os campos estejam bloqueados e oculta o ícone de interrogação
+                document.getElementById('dataField').setAttribute('readonly', 'readonly');
+                document.getElementById('horaField').setAttribute('readonly', 'readonly');
+                document.getElementById('question-icon').style.display = 'none';
+            }
+            
+            // Inicializa os tooltips do Bootstrap
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 
     <!-- script -->
