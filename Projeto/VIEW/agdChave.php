@@ -25,9 +25,18 @@
 </head>
 
 <body>
+    <!--Header-->
     <?php
-		include_once "Header.php"
-	?>
+    if (isset($_SESSION['gerencia']) && $_SESSION['gerencia'] == 1) {
+        
+        include_once "HeaderGerente.php";
+    }
+    else{
+        include_once "Header.php";
+    }
+    ?>
+    
+    <!--Header-->
 
     <!-- Formulário -->
     <main>
@@ -40,6 +49,7 @@
         $numero = '';
         $andar = '';
         $descricao = '';
+        $emuso = '1';
         
         // Verifica se um ID foi passado na URL
         if (isset($_GET['id'])) {
@@ -73,7 +83,8 @@
     </div>
         <form class="cadastro" action="../PHP/agendarChave.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>">
+            <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
+            <input type="text" name="emuso" value="<?php echo $emuso; ?>">
 
             <div class="form-group">
                 <label for="numSala">Número da sala</label>

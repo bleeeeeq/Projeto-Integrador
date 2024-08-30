@@ -20,9 +20,18 @@ if (isset($_SESSION['nome'])) {
 </head>
 
 <body>
+    <!--Header-->
     <?php
-    include_once "Header.php";
+    if (isset($_SESSION['gerencia']) && $_SESSION['gerencia'] == 1) {
+        
+        include_once "HeaderGerente.php";
+    }
+    else{
+        include_once "Header.php";
+    }
     ?>
+    
+    <!--Header-->
 
     <div class="bTable">
 
