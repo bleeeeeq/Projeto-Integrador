@@ -1,0 +1,55 @@
+.bTable {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    margin-top: 50px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.search-form input[type="text"] {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+}
+.search-form button {
+    background-color: #ffb509;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+th, td {
+    background-color: white;
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+    background-color: rgba(104, 163, 252, 0.596);
+}
+th {
+    background-color: rgba(18, 99, 219, 0.596);
+}
+.all-classes-button {
+    display: flex;
+    justify-content: flex-end;
+}
+.all-classes-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffb509;
+}
