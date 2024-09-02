@@ -5,10 +5,10 @@
 
     $sql = "SELECT * FROM agenda";
     $results = '';
-    if(isset($_POST['agendar_id'])){
-        $idChave = $_POST['agendar_id'];
+    if(isset($_POST['devolver_id'])){
+        $idChave = $_POST['devolver_id'];
         echo"<script>
-                window.location.href = '../VIEW/agdChave.php?id=$idChave';
+                window.location.href = '../VIEW/dvdChave.php?id=$idChave';
     </script>";
     exit();
         }
@@ -22,8 +22,8 @@
                     <td>{$linha['nome']}</td>
                     <td>{$linha['emuso']}</td>
                     <td><form action='../PHP/devolverChaves.php' method='POST' style='display: inline;'>
-                        <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
-                        <button type='submit' name='agendar' style='background-color: #ffb509;'>Registrar</button>
+                        <input type='hidden' name='devolver_id' value='{$linha['idagenda']}'>
+                        <button type='submit' name='devolver' style='background-color: #ffb509;'>Registrar</button>
                     </form></td>                            
                 </tr>";                       
 
