@@ -1,4 +1,4 @@
-    .cadastro{
+.cadastro{
     background-color: rgba(104, 163, 252, 0.596);
     background-color: rgb(233, 227, 227);
     width: 15%;
@@ -12,14 +12,16 @@
     margin-bottom: 80px;
     flex-direction: column;
     display: flex;
-    }
+}
 
-    #idButton{
-        text-align: center;
-    }
+#idButton{
+    text-align: center;
+}
 
-    .cadastro div{
-        width: 100%;
-        min-width: 30%;
-    }
+.cadastro div{
+    width: 100%;
+    min-width: 30%;
+}
+
+
     

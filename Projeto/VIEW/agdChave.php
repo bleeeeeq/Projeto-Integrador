@@ -5,7 +5,7 @@
     }
 
     else{
-        header("location: login.html");
+        header("location: login.php");
     }
 ?>
 
@@ -49,7 +49,7 @@
         $numero = '';
         $andar = '';
         $descricao = '';
-        $emuso = '1';
+        $emuso = 'Não disponível';
         
         // Verifica se um ID foi passado na URL
         if (isset($_GET['id'])) {
@@ -126,9 +126,12 @@
 
     </main>
 
+    <!--Footer-->
     <?php
 		include_once "Footer.php"
 	?>
+     <!--Footer-->
+
     <script>
         // Máscaras
         function mascaraSala(Sala) {

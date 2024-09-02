@@ -13,13 +13,12 @@ if(isset($_POST['Agendar'])){
             $idsala = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
         
     
-
             $declaracaoBD = $conexao -> prepare("INSERT INTO `historicochave`(`chave`,`nome`,`data`,`hora`,`nomeUsuario`)VALUES(?,?,?,?,?)");
             $declaracaoBD -> bind_param("sssss", $numSala, $nome, $data, $hora, $nomeUsuario);
-            
+            $declaracaoBD -> execute();
 
             $declaracaoBD = $conexao -> prepare("UPDATE `agenda` SET  `nomeUsuario` = ? , `emuso` = ? WHERE `idagenda` = ?");
-            $declaracaoBD -> bind_param("sss", $nomeUsuario, $emuso, $idsala);
+            $declaracaoBD -> bind_param("ssi", $nomeUsuario, $emuso, $idsala);
             
             if ($declaracaoBD -> execute()){
                 echo "<script>
@@ -30,4 +29,5 @@ if(isset($_POST['Agendar'])){
             else{
                 echo "Erro ao realizar o agendamento da chave: ". $declaracaoBD->error;
             }
+            $declaracao->close();
 }

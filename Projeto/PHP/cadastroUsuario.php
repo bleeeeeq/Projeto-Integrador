@@ -53,6 +53,6 @@ if(isset($_POST['btnCad'])){
             else{
                 echo "Erro ao cadastrar um usuário: " . $declaracao->error;
             }
-
+            $declaracao->close();
 }
     

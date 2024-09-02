@@ -3,12 +3,12 @@
     include 'database.php';
 
 
-    $sql = "SELECT * FROM chave";
+    $sql = "SELECT * FROM agenda";
     $results = '';
     if(isset($_POST['agendar_id'])){
-        $id = $_POST['agendar_id'];
+        $idChave = $_POST['agendar_id'];
         echo"<script>
-                window.location.href = '../VIEW/agdChave.php?id=$id';
+                window.location.href = '../VIEW/agdChave.php?id=$idChave';
     </script>";
     exit();
         }
@@ -19,24 +19,24 @@
 
         $sql .=" WHERE 1 = 1";
         if (!empty($numero)){
-            $sql .= " AND numero like '%$numero%'";
+            $sql .= " AND chave like '%$numero%'";
         }
         if (!empty($andar)){
-            $sql .= " AND andar like '%$andar%'";
+            $sql .= " AND chave like '%$andar%'";
         }
     }
 
     $resultado = $conexao->query($sql);
     if ($resultado -> num_rows > 0){
         while ($linha = $resultado -> fetch_assoc()){
-            if($linha['registrado'] === 'Não disponível'){
-                $disabled = $linha['registrado'] === 'Não disponível' ? 'disabled' : '';
+            if($linha['emuso'] === 'Não disponível'){
+                $disabled = $linha['emuso'] === 'Não disponível' ? 'disabled' : '';
                 $results .= "<tr>
-                    <td>{$linha['numero']}</td>
-                    <td>{$linha['descricao']}</td>
-                    <td>{$linha['registrado']}</td>
+                    <td>{$linha['chave']}</td>
+                    <td>{$linha['nome']}</td>
+                    <td>{$linha['emuso']}</td>
                     <td><form action='../PHP/tabRegistroChaves.php' method='POST' style='display: inline;'>
-                        <input type='hidden' name='agendar_id' value='{$linha['idchave']}'>
+                        <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
                         <button type='submit' name='agendar' style='background-color: #ffb509;' $disabled>Registrar</button>
                     </form></td>                            
                 </tr>";                       
@@ -44,11 +44,11 @@
             }
             else{
             $results .=  "<tr>
-                            <td>{$linha['numero']}</td>
-                            <td>{$linha['descricao']}</td>
-                            <td>{$linha['registrado']}</td>
+                            <td>{$linha['chave']}</td>
+                            <td>{$linha['nome']}</td>
+                            <td>{$linha['emuso']}</td>
                             <td><form action='../PHP/tabRegistroChave.php' method='POST' style ='display: inline;'>
-                                <input type='hidden' name='agendar_id' value='{$linha['idchave']}'>
+                                <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
                                 <button type='submit' name='agendar' style='background-color: #ffb509;'>Registrar</button>
                             </form></td>                            
                         </tr>";       

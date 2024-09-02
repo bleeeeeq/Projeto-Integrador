@@ -5,7 +5,7 @@
     }
 
     else{
-        header("location: login.html");
+        header("location: login.php");
     }
 ?>
 
@@ -48,7 +48,7 @@
                     <th>Sala</th>
                     <th>Hora</th>
                     <th>Data</th>
-                    <th>Nome (por enqto)</th>
+                    <th>Nome</th>
                 </tr>
             </thead>
 

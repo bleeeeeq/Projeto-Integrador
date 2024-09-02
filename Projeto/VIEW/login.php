@@ -12,16 +12,6 @@
  
     <title>Senac Chaves</title>
  
-    <!-- MODIFICAÇÃO TEMPORÁRIA PRO FOOTER FICAR TRAVADO EM BAIXO DA TELA -->
-    <!-- MODIFICAÇÃO TEMPORÁRIA PRO FOOTER FICAR TRAVADO EM BAIXO DA TELA -->
-    <style>
-        footer{
-            position: fixed;
-        }
-    </style>
-    <!-- MODIFICAÇÃO TEMPORÁRIA PRO FOOTER FICAR TRAVADO EM BAIXO DA TELA -->
-    <!-- MODIFICAÇÃO TEMPORÁRIA PRO FOOTER FICAR TRAVADO EM BAIXO DA TELA -->
- 
 </head>
  
 <body>
@@ -89,6 +79,12 @@
  
         <button type="submit" src="../VIEW/index.html" name="logar" class="btn btn-primary">Logar</button>
     </form>
+
+    <!--Footer-->
+    <?php
+		include_once "Footer.php"
+	?>
+     <!--Footer-->
  
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

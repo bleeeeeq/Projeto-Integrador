@@ -81,12 +81,12 @@
 
             <div class="form-group">
                 <label for="inputCPF">CPF</label>
-                <input type="text" name="cpf" class="form-control" id="inputCPF" size="36.9" oninput="mascaraCPF(this)" maxlength="14" required>
+                <input type="text" name="cpf" class="form-control" id="inputCPF" size="28" oninput="mascaraCPF(this)" maxlength="14" required>
             </div>
 
             <div class="gerencia">
-                <label>Permissão para o gerenciar chaves:</label>
-                <input type="checkbox" name="gerente" class="form-control" id="inputgerencia" value ="1">
+                <label class="gerenciaL" for="inputgerencia"> Permissão para o gerenciar chaves:</label>
+                <input type="checkbox" name="gerente" class="checkbox" id="inputgerencia" value ="1" >
             </div>
         </div>
         </div>
