@@ -4,6 +4,8 @@ if (isset($_SESSION['nome'])) {
 } else {
     header("location: login.php");
 }
+
+
 ?>
 
 <!DOCTYPE html>
