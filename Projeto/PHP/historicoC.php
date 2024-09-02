@@ -34,7 +34,7 @@
                     </tr>";                        
     }
 
-    $_SESSION['results'] = $results;
+    $_SESSION['historico'] = $results;
 
     $conexao -> close();
     header ("Location: ../VIEW/historico.php?");

@@ -9,7 +9,7 @@ if(isset($_POST['logar'])){
     if(strlen($_POST['cpRa'])==0){
         echo "<script>
             alert('Preencha o campo de identificação')
-            window.location.href= '../VIEW/login.html'
+            window.location.href= '../VIEW/login.php'
             </script>";
          
         //echo "Preencha o campo email.";
@@ -17,7 +17,7 @@ if(isset($_POST['logar'])){
     else if(strlen($_POST['cpSenha'])==0){
         echo "<script>
                 alert('Preencha o campo senha')
-                window.location.href= '../VIEW/login.html'
+                window.location.href= '../VIEW/login.php'
                 </script>";
         //echo "Preencha o campo senha.";
     }
@@ -33,7 +33,6 @@ if(isset($_POST['logar'])){
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['gerencia'] = $usuario['gerencia'];
             echo "<script>
-                alert ('Identificação verificado com sucesso! Bem vindo ao sistema, ".$usuario['nome']."!')
                 window.location.href= '../VIEW/index.php'
             </script>";
             exit;
@@ -42,7 +41,7 @@ if(isset($_POST['logar'])){
         else{
             echo "<script>
                 alert('Identificação ou Senha incorretos')
-                window.location.href= '../VIEW/login.html'
+                window.location.href= '../VIEW/login.php'
                 </script>";
             exit;
         }

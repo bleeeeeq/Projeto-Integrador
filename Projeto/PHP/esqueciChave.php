@@ -53,7 +53,7 @@
                     </tr>";                        
     }
 
-    $_SESSION['results'] = $results;
+    $_SESSION['esqueciChave'] = $results;
     $conexao -> close();
     header ("Location: ../VIEW/esqueciChave.php?");
     exit();

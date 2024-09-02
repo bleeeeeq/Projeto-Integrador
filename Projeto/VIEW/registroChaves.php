@@ -4,8 +4,6 @@ if (isset($_SESSION['nome'])) {
 } else {
     header("location: login.php");
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -65,8 +63,8 @@ if (isset($_SESSION['nome'])) {
                 <tbody>
                     <!-- As chaves serão inseridas aqui -->
                     <?php
-                    if (isset($_SESSION['results'])) {
-                        echo $_SESSION['results'];
+                    if (isset($_SESSION['tabRegistroChave'])) {
+                        echo $_SESSION['tabRegistroChave'];
                         //   unset($_SESSION['results']);
                     }
                     ?>

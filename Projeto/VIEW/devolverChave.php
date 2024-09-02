@@ -52,6 +52,7 @@
                         <tr>
                             <th>Número</th>
                             <th>Descrição</th>
+                            <th>Status</th>
                             <th>Opção</th>
                         </tr>
                     </thead>
@@ -59,8 +60,8 @@
                     <tbody>
                         <!-- As chaves serão inseridas aqui -->
                         <?php
-                            if(isset($_SESSION['results'])){
-                                echo $_SESSION['results'];
+                            if(isset($_SESSION['devolver'])){
+                                echo $_SESSION['devolver'];
                              //   unset($_SESSION['results']);
                             }
                         ?>

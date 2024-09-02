@@ -37,7 +37,7 @@
                     <td>{$linha['emuso']}</td>
                     <td><form action='../PHP/tabRegistroChaves.php' method='POST' style='display: inline;'>
                         <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
-                        <button type='submit' name='agendar' style='background-color: #ffb509;' $disabled>Registrar</button>
+                        <button type='submit' name='agendar' style='background-color: #ffb509;' $disabled>Pegar Chave</button>
                     </form></td>                            
                 </tr>";                       
 
@@ -49,7 +49,7 @@
                             <td>{$linha['emuso']}</td>
                             <td><form action='../PHP/tabRegistroChave.php' method='POST' style ='display: inline;'>
                                 <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
-                                <button type='submit' name='agendar' style='background-color: #ffb509;'>Registrar</button>
+                                <button type='submit' name='agendar' style='background-color: #ffb509;'>Pegar Chave</button>
                             </form></td>                            
                         </tr>";       
             }       
@@ -62,7 +62,7 @@
                     </tr>";                        
     }
 
-    $_SESSION['results'] = $results;
+    $_SESSION['tabRegistroChave'] = $results;
     $conexao -> close();
     header ("Location: ../VIEW/registroChaves.php?");
     exit();

@@ -23,7 +23,7 @@
                     <td>{$linha['emuso']}</td>
                     <td><form action='../PHP/devolverChaves.php' method='POST' style='display: inline;'>
                         <input type='hidden' name='devolver_id' value='{$linha['idagenda']}'>
-                        <button type='submit' name='devolver' style='background-color: #ffb509;'>Registrar</button>
+                        <button type='submit' name='devolver' style='background-color: #ffb509;'>Devolver chave</button>
                     </form></td>                            
                 </tr>";                       
 
@@ -37,7 +37,7 @@
                     </tr>";                        
     }
 
-    $_SESSION['results'] = $results;
+    $_SESSION['devolver'] = $results;
     $conexao -> close();
     header ("Location: ../VIEW/devolverChave.php?");
     exit();

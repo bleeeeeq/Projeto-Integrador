@@ -59,8 +59,8 @@
                     <tbody>
                         <!-- As chaves serão inseridas aqui -->
                         <?php
-                            if(isset($_SESSION['results'])){
-                                echo $_SESSION['results'];
+                            if(isset($_SESSION['esqueciChave'])){
+                                echo $_SESSION['esqueciChave'];
                              //   unset($_SESSION['results']);
                             }
                         ?>

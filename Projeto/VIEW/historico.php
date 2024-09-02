@@ -55,8 +55,8 @@
             <tbody>
                 <!-- As chaves serão inseridas aqui -->
                 <?php
-                    if(isset($_SESSION['results'])){
-                        echo $_SESSION['results'];
+                    if(isset($_SESSION['historico'])){
+                        echo $_SESSION['historico'];
                      //   unset($_SESSION['results']);
                     }
                 ?>
