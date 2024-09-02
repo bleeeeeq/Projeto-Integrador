@@ -32,9 +32,9 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Atualizações</a>
+                    <a class="nav-link" href="FAQ.php">Perguntas Frequentes</a>
                 </li>
-
+                
                 <li class="nav-item">
                     <a class="nav-link" href="cadUsuario.php">Cadastro</a>
                 </li>
