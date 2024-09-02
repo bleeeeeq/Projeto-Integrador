@@ -10,7 +10,7 @@
     <!-- Footer -->
  <footer class="Footer" style="background-color: #ffb509;">
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-            style="background-color: #ffffff;"></section>
+            style="background-color: #f5f5ff;"></section>
 
         <!-- Section: Links  -->
         <section class="">

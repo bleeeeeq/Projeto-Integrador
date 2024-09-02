@@ -1,5 +1,9 @@
 /* Todas as telas */
 
+body{
+    background-color: #f5f5ff;
+}
+
 footer {
     left: 0;
     bottom: 0;
