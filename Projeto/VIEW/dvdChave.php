@@ -49,7 +49,7 @@
         $numero = '';
         $andar = '';
         $descricao = '';
-        $emuso = 'Disponivel';
+        $emuso = 'Disponível';
         
         // Verifica se um ID foi passado na URL
         if (isset($_GET['id'])) {

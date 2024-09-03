@@ -23,7 +23,7 @@ if(isset($_POST['Agendar'])){
     if ($declaracaoBD -> execute()){
          echo "<script>
                  alert('Perfeito! Agora você pode pegar sua chave!');
-                 window.location.href = '../PHP/cadUsuario.php';
+                 window.location.href = '../VIEW/index.php';
              </script>;";
      }
      else{
