@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="shortcut icon" href="../IMG/Utilitários/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/tabela.css">
     <title>Senac Chaves</title>
 </head>
@@ -26,8 +27,9 @@
     ?>
 
 <div class="bTable">
-    
+    <h1><b>Pegar Chave (OLD)</b></h1>
     <div class="container">
+
 
         <form class="search-form" method="POST" action="../PHP/tabelaChaves.php">
             <input type="text" name="andar" placeholder="Andar">
@@ -57,7 +59,7 @@
                 <?php
                     if(isset($_SESSION['tabRegistroChave'])){
                         echo $_SESSION['tabRegistroChave'];
-                     //   unset($_SESSION['results']);
+                        unset($_SESSION['tabRegistroChave']);
                     }
                 ?>
             </tbody>
