@@ -45,9 +45,8 @@
                         Chaves
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Verificar chaves</a>
-                        <a class="dropdown-item" href="tabChaves.php">Realizar agendamento</a>
-                        <a class="dropdown-item" href="#">Perdi minha chave</a>
+                        <a class="dropdown-item" href="registroChaves.php">Pegar uma chave</a>
+                        <a class="dropdown-item" href="devolverChave.php">Devolver uma chave</a>
                     </div>
                 </li>
 
