@@ -28,13 +28,13 @@
  
         <div class="form-group">
           <label for="cpRA">Seu número de identificação</label>
-          <input type="number" class="form-control" id="ra" name="cpRa" aria-describedby="emailHelp" placeholder="Sua identificação">
+          <input type="number" class="form-control" id="ra" name="cpRa" aria-describedby="emailHelp" placeholder="Sua identificação" required>
           <small id="emailHelp" class="form-text text-muted" style="align-items: center">Nunca vamos compartilhar sua Identificação, com ninguém.</small>
         </div>
  
         <div class="form-group">
           <label for="cpSenha">Senha</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="cpSenha" placeholder="Senha">
+          <input type="password" class="form-control" id="exampleInputPassword1" name="cpSenha" placeholder="Senha" required>
         </div>
  
         <button type="submit" src="../VIEW/index.html" name="logar" class="btn btn-primary">Logar</button>
