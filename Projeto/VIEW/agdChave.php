@@ -20,8 +20,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/styleCadChave.css">
     <link rel="shortcut icon" href="../IMG/Utilitários/Logo.png" type="image/x-icon">
-
-    <title>Cadastrar chave</title>
+    <title>Senac Chaves</title>
 </head>
 
 <body>
@@ -55,7 +54,6 @@
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             ?>
-            <h1 style="text-align:center">Agendar Chave</h1>
             <?php
             
             // Busca os dados da chave pelo ID
@@ -84,7 +82,7 @@
         <form class="cadastro" action="../PHP/agendarChave.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
-            <input type="text" name="emuso" value="<?php echo $emuso; ?>">
+            <input type="hidden" name="emuso" value="<?php echo $emuso; ?>">
 
             <div class="form-group">
                 <label for="numSala">Número da sala</label>
