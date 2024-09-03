@@ -1,156 +1,92 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Todas as telas */
 
-header {
-    background-color: #034C8C;
-    min-height: 150px;
-    padding: 15px;
+body{
+    background-color: #f5f5ff;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%; 
     text-align: center;
-    box-shadow: 0 2px 4px #3b77e6;
-    ;
     
 }
 
-body {
-    
-    background-color: #98B4D4;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #323232;
-    font-weight: 400;
-    font-size: 20px;
+/* Todas as telas */
+
+/* Index */
+
+/* Index */
+
+/* Cadastro */
+
+.cadastro{
+    background-color: rgba(104, 163, 252, 0.596);
+    max-width: 75%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.158);
+   
+    margin-bottom: 80px;
+    flex-direction: column;
+    display: flex;
+}
+ 
+form input[type="email"]{
+    margin-bottom: 15px;
+}
+ 
+#inputEstado{
+    width: 90%;
+    margin-bottom: 15px;
+}
+ 
+.endereco{
+    width: 98%;
+    margin-bottom: 15px;
+}
+/* Cadastro */
+
+/* Login */
+.login{
+    background-color: rgba(104, 163, 252, 0.596);
+    max-width: 20%;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.158);
+ 
+    margin-bottom: 80px;
+    flex-direction: column;
+    align-items: middle;
+    display: flex;
+}
+/* Login */
+
+.gerencia {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+    align-items: center;
+    margin-bottom: 2%;
 }
 
-footer{
-    background-color: #034C8C;   
-    padding: 20px 0;
-    box-shadow: 4px 2px 4px 4px #3b77e6;
-        
-    text-align: center;
-    list-style: none;
-    margin-inline: 0;
-    margin-bottom: 0;
-
-    margin-top: auto;
-    width: 100%;
+input.checkbox {
+    transform : scale(1.4);
+    margin-left: 10px;
+    align-items: center;
 }
 
-footer ul{
-    list-style: none;
+.gerenciaL{
+    margin-top: 6.1px;
+    margin-left: 4px;
+
 }
 
 h1 {
-    font-family: 'Bebas Neue', 'Abel', 'Plus Jakarta Sans';
-    font-size: 100px;
-    font-weight: 400;
-    font-style: normal;
-
-
-    color: #111439; 
-
-}
-
-article{
-    padding: 9px 40px 9px 40px;
-    border: 5px;
-    border-radius: 20px;
-    background-color: rgba(231, 212, 189, 0.473);
-    margin-bottom: 10px;
-}
-
-#coluna{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;   
-}
-
-header{
-    margin-bottom: 10px;
-}
-
-
-
-nav ul{    
-    list-style-type: none; /*Tirando a marcação da lista*/
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li{
-    position: relative;
-    display: inline-block;
-}
-
-nav ul li a{
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
-nav ul li a:hover{
-    color: black;
-    background-color: rgb(253, 155, 69)
-}
-
-.dropdown-child{
-    display: none;
-    background-color: #333;
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    min-width: 160px;
-}
-
-.dropdown-child li{
-    display: block;
-}
-
-.dropdown-child a{
-    color: orange;
-    padding: 5px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-child{
-    display: block;
-}
-
-
-table{
+    margin-top: 25px;
     text-align: center;
-
-=======
-    border: 5px rgb(0, 0, 0) ;
 }
-
-table th{
-    border: 5px ;
-    color: indigo;
-   
-}
-
-/* Especificando as cores para linhas pares, também é possível trocar o "even" por odd para ser linhas ímpares! */ 
-table td:nth-child(even){
-    background-color: antiquewhite;
-    color: indigo;
-}
-
-table td, table th{
-    border: 3px black outset;
-    background-color: antiquewhite;
-}
-
-h1{
-    text-align: center;
-
-    font-size: 50px;
-    font-weight: 400;
-}
-

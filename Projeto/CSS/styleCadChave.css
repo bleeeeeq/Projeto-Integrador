@@ -1,0 +1,27 @@
+.cadastro{
+    background-color: rgba(104, 163, 252, 0.596);
+    background-color: rgb(233, 227, 227);
+    width: 15%;
+    min-width: 15%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.158);
+   
+    margin-bottom: 80px;
+    flex-direction: column;
+    display: flex;
+}
+
+#idButton{
+    text-align: center;
+}
+
+.cadastro div{
+    width: 100%;
+    min-width: 30%;
+}
+
+
+    
