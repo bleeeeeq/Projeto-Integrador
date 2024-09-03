@@ -1,4 +1,3 @@
-
 <?php
     session_start();
     if(isset($_SESSION['nome'])){
@@ -9,17 +8,19 @@
         header("location: login.php");
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/esqueciChave.css">
+    <link rel="shortcut icon" href="../IMG/Utilitários/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/tabela.css">
     <title>Senac Chaves</title>
 </head>
+
 <body>
     <!--Header-->
     <?php
@@ -37,8 +38,8 @@
     <main>
         <div class="bTable">
     
+            <h1><b>Perdi Chave</b></h1>
             <div class="container">
-                <h1>Esqueci minha chave</h1>
         
                 <?php
                     if(isset($_SESSION['msg'])){
@@ -52,6 +53,7 @@
                         <tr>
                             <th>Número</th>
                             <th>Descrição</th>
+                            <th>Status</th>
                             <th>Opção</th>
                         </tr>
                     </thead>
@@ -59,21 +61,26 @@
                     <tbody>
                         <!-- As chaves serão inseridas aqui -->
                         <?php
-                            if(isset($_SESSION['esqueciChave'])){
-                                echo $_SESSION['esqueciChave'];
-                             //   unset($_SESSION['results']);
+                            if(isset($_SESSION['perdi'])){
+                                echo $_SESSION['perdi'];
+                                unset($_SESSION['perdi']);
                             }
                         ?>
                     </tbody>
                 </table>
         
                 <div class="all-classes-button">
-                    <form method="POST" action="../PHP/esqueciChave.php">
-                        <button type="submit" name="all_classes">Carregar as Chaves</button>
+                    <form method="post" action="../PHP/esqueciChave.php">
+                        <button type="submit" name="carregar">Carregar as Chaves</button>
                     </form>
                 </div>
             </div>
     </main>
+
+    <?php
+        include_once "Footer.php"
+    ?>
+
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

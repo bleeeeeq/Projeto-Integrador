@@ -2,48 +2,31 @@
     session_start();
     include 'database.php';
 
-
     $sql = "SELECT * FROM agenda";
     $results = '';
-    if(isset($_POST['btn_chavePerdida'])){
-        $id = $_POST['btn_chavePerdida'];
+    if(isset($_POST['perdi_id'])){
+        $idChave = $_POST['perdi_id'];
         echo"<script>
-                window.location.href = '../VIEW/agendarChave.php?id=$id';
+                window.location.href = '../VIEW/dvdChave.php?id=$idChave'; VAI ENVIAR PARA O FORM DE MOTIVO E DESCRIÇÃO
     </script>";
     exit();
         }
-    
-    if(isset($_SESSION['nome'])){
-        $nome = $_SESSION['nome'];
-
-        $sql .=" WHERE 1 = 1";
-        if (!empty($nome)){
-            $sql .= " AND nome like '%$nome%'";
-        }
-        else{
-            echo "<script> alert('O nome do usuário não foi encontrado(erro na session nome)')";
-        }
-    }
 
     $resultado = $conexao->query($sql);
     if ($resultado -> num_rows > 0){
         while ($linha = $resultado -> fetch_assoc()){
-            if($linha['registrado'] === 'Não disponível'){
-                $disabled = $linha['registrado'] === 'Não disponível' ? 'disabled' : '';
-                if($linha['nomeUsuario'] === $nome){
-                    $results .= "<tr>
-                    <td>{$linha['numero']}</td>
-                    <td>{$linha['descricao']}</td>
-                    <td><form action='../PHP/tabRegistroChaves.php' method='POST' style='display: inline;'>
-                        <input type='hidden' name='btn_chavePerdida' value='{$linha['idchave']}'>
-                        <button type='submit' name='agendar' style='background-color: #ffb509;'>Chave perdida</button>
+            if($linha['emuso'] === 'Não disponível'&& $linha['nomeUsuario'] == $_SESSION['nome']){
+                $results .= "<tr>
+                    <td>{$linha['chave']}</td>
+                    <td>{$linha['nome']}</td>
+                    <td>{$linha['emuso']}</td>
+                    <td><form action='../PHP/esqueciChave.php' method='POST' style='display: inline;'>
+                        <input type='hidden' name='perdi_id' value='{$linha['idagenda']}'>
+                        <button type='submit' name='perdi' style='background-color: #ffb509;'>Perdi chave</button>
                     </form></td>                            
-                </tr>";     
-                }            
-            }
-            else{
+                </tr>";                       
 
-            }       
+            } 
         }
     }
 
@@ -53,9 +36,10 @@
                     </tr>";                        
     }
 
-    $_SESSION['esqueciChave'] = $results;
+    $_SESSION['perdi'] = $results;
     $conexao -> close();
     header ("Location: ../VIEW/esqueciChave.php?");
     exit();
     
 ?>
+
