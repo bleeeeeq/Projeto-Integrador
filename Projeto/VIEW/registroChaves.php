@@ -34,7 +34,7 @@ if (isset($_SESSION['nome'])) {
     <!--Header-->
 
     <div class="bTable">
-
+        <h1><b>Pegar Chave</b></h1>
         <div class="container">
 
             <form class="search-form" method="POST" action="../PHP/tabRegistroChave.php">
@@ -65,7 +65,7 @@ if (isset($_SESSION['nome'])) {
                     <?php
                     if (isset($_SESSION['tabRegistroChave'])) {
                         echo $_SESSION['tabRegistroChave'];
-                        //   unset($_SESSION['results']);
+                        unset($_SESSION['tabRegistroChave']);
                     }
                     ?>
                 </tbody>
