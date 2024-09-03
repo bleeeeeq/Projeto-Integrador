@@ -46,7 +46,7 @@ if(isset($_POST['btnCad'])){
             if ($declaracao->execute()){
                 echo" <script>
                     alert('Usuário cadastrado com sucesso');
-                     window.location.href ='../VIEW/cadUsuario.php'
+                     window.location.href ='../VIEW/index.php'
                 </script>";
             }
     
