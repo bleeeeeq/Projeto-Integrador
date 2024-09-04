@@ -37,11 +37,26 @@
                     <td>{$linha['emuso']}</td>
                     <td><form action='../PHP/tabRegistroChaves.php' method='POST' style='display: inline;'>
                         <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
-                        <button type='submit' name='agendar' style='background-color: #ffb509;' $disabled>Pegar Chave</button>
+                        <button type='submit' name='agendar' style='background-color: #ffb509;' $disabled>Chave em uso</button>
                     </form></td>                            
                 </tr>";                       
 
             }
+
+            else if($linha['emuso'] === 'Perdida'){
+                $disabled = $linha['emuso'] === 'Perdida' ? 'disabled' : '';
+                $results .= "<tr>
+                    <td>{$linha['chave']}</td>
+                    <td>{$linha['nome']}</td>
+                    <td>{$linha['emuso']}</td>
+                    <td><form action='../PHP/tabRegistroChaves.php' method='POST' style='display: inline;'>
+                        <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
+                        <button type='submit' name='agendar' style='background-color: #ffb509;' $disabled>Chave Perdida</button>
+                    </form></td>                            
+                </tr>";                       
+
+            }
+
             else{
             $results .=  "<tr>
                             <td>{$linha['chave']}</td>
