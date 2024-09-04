@@ -42,7 +42,7 @@
                         </p>
 
                         <p>
-                            <a href="https://github.com/igorAp13" class="text-reset">Igor C#</a>
+                            <a href="https://github.com/igorAp13" class="text-reset">Igor C Sharp</a>
                         </p>
 
                         <p>
