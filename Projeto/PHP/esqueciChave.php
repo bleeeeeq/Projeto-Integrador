@@ -7,7 +7,7 @@
     if(isset($_POST['perdi_id'])){
         $idChave = $_POST['perdi_id'];
         echo"<script>
-                window.location.href = '../VIEW/dvdChave.php?id=$idChave'; VAI ENVIAR PARA O FORM DE MOTIVO E DESCRIÇÃO
+                window.location.href = '../VIEW/formPerdiChave.php?id=$idChave';
     </script>";
     exit();
         }
