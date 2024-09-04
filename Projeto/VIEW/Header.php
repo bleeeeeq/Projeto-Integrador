@@ -47,6 +47,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="registroChaves.php">Pegar uma chave</a>
                         <a class="dropdown-item" href="devolverChave.php">Devolver uma chave</a>
+                        <a class="dropdown-item" href="esqueciChave.php">Perdi uma chave</a>
                     </div>
                 </li>
 
