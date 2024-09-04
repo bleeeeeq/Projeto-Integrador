@@ -106,9 +106,9 @@
                                 </div>
                                 <div class="collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#faqAccordion">
                                     <div class="card-body">
-                                        <p>Após preencher todos os campos e revisar as informações, clique no botão "Cadastrar usuário" para enviar o formulário.</p>
-                                        <p>Se o seu formulario for enviado com exito vai aparecer a seguinte informação "Usuário cadastrado com sucesso".</p>
-                                        <p>Se tiver aparecido a mensagem "Erro ao cadastrar o usuário", revise as informações que você inseriu no formulario e tente outra vez.</p>
+                                        <p>Caso você tenha perdido a chave vá até a parte superior do site, você encontrará a barra de navegação, e nele, clique na opção "Chaves". Após isso, selecione a opção desejada, nesse caso, "Perdi uma chave".</p>
+                                        <p>Você será enviado para a tabela "Perdi chave", escolha a chave da sala que você perdeu e clique no botão "Perdi chave".</p>
+                                        <p>Por fim você será redirecionado para um formulário, ele irá buscar os dados da chave selecionada, nesse caso você só irá selecionar um motivo que seja coerente a situação e um campo que você deverá especificar mais sobre o ocorrido.</p>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                         <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                             <i class="lni-emoji-sad"></i>
                             <p class="mb-0 px-2">Não encontra suas respostas?</p>
-                            <a href="#"> Nos contate!</a>
+                            <a href="https://github.com/bleeeeeq" target="_blank"> Nos contate!</a>
                         </div>
                     </div>
                 </div>
