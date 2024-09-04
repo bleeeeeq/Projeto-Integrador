@@ -48,7 +48,10 @@
         $numero = '';
         $andar = '';
         $descricao = '';
-        $emuso = 'Não disponível';
+
+        $acontecimento = '';
+        $especificar = '';
+        $emuso = 'Perdida';
         
         // Verifica se um ID foi passado na URL
         if (isset($_GET['id'])) {
@@ -79,7 +82,7 @@
         ?>
 
     </div>
-        <form class="cadastro" action="../PHP/agendarChave.php" method="post">
+        <form class="cadastro" action="../PHP/formPerdiChave.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
             <input type="hidden" name="emuso" value="<?php echo $emuso; ?>">
@@ -104,13 +107,21 @@
             </div>
 
             <div class="form-group">
-                <label for="Motivo">Qual motivo do acontecimento?</label>
-                <input type="text" class="form-control" name="Motivo" id="exampleInputPassword1" placeholder="Pediram/SeiLá/Outro" required value="<?php echo htmlspecialchars($descricao); ?>">
+                <label for="acontecimento">Qual motivo do acontecimento?</label>
+                <select class="form-control" name="acontecimento">
+                    <option value="Chave foi danificada ou quebrada" <?php if ($acontecimento == 'Chave foi danificada ou quebrada') ?>>Chave foi danificada ou quebrada</option>
+                    <option value="Chave foi deixada em outro local" <?php if ($acontecimento == 'Chave foi deixada em outro local') ?>>Chave foi deixada em outro local</option>
+                    <option value="Chave não foi devolvida conforme informado" <?php if ($acontecimento == 'Chave não foi devolvida conforme informado') ?>>Chave não foi devolvida conforme informado</option>
+                    <option value="Chave foi confundida com outra" <?php if ($acontecimento == 'Chave foi confundida com outra') ?>>Chave foi confundida com outra</option>
+                    <option value="Chave foi roubada" <?php if ($acontecimento == 'Chave foi roubada') ?>>Chave foi roubada</option>
+                    <option value="Chave caiu no vaso" <?php if ($acontecimento == 'Chave caiu no vaso') ?>>Chave caiu no vaso</option>
+                    <option value="Outros (especificar)" <?php if ($acontecimento == 'Outros (especificar)') ?>>Outros (especificar)</option>
+                </select>
             </div>
 
             <div class="form-group">
-                <label for="Descricao">Descreva o que ocorreu</label>
-                <input type="text" class="form-control" name="Descricao" id="exampleInputPassword1" placeholder="Como perdeu a chave?" required value="<?php echo htmlspecialchars($descricao); ?>">
+                <label for="especificar">Descreva o que ocorreu</label>
+                <textarea class="form-control" name="especificar" id="exampleInputPassword1" placeholder="Como perdeu a chave?" rows="4" cols="30" required value="<?php echo htmlspecialchars($especificar); ?>"></textarea>
             </div>
 
 
