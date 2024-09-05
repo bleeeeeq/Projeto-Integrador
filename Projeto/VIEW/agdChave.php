@@ -49,6 +49,7 @@
         $andar = '';
         $descricao = '';
         $emuso = 'Não disponível';
+        $status = "Chave retirada";
         
         // Verifica se um ID foi passado na URL
         if (isset($_GET['id'])) {
@@ -83,6 +84,7 @@
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
             <input type="hidden" name="emuso" value="<?php echo $emuso; ?>">
+            <input type="hidden" name="status" value="<?php echo $status; ?>">
 
             <div class="form-group">
                 <label for="numSala">Número da sala</label>
