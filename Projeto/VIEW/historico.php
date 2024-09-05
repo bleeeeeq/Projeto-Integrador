@@ -48,6 +48,7 @@
                     <th>Sala</th>
                     <th>Hora</th>
                     <th>Data</th>
+                    <th>Status</th>
                     <th>Nome</th>
                 </tr>
             </thead>

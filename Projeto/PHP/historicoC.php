@@ -22,7 +22,8 @@
                             <td>{$linha['chave']}</td>
                             <td>{$linha['nome']}</td>   
                             <td>{$linha['hora']}</td>
-                            <td>{$linha['data']}</td>                          
+                            <td>{$linha['data']}</td>                         
+                            <td>{$linha['status']}</td>                         
                             <td>{$linha['nomeUsuario']}</td>                          
                         </tr>";                       
         }
