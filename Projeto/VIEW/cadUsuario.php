@@ -5,7 +5,7 @@
     }
 
     else{
-        header("location: login.html");
+        header("location: login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputCity">Cidade</label>
-                <input type="text" name="cidade" class="form-control" id="inputCity" required>
+                <input type="text" name="cidade" class="form-control" id="inputCity" placeholder="Cidade dos malucos" required>
             </div>
 
             <div class="form-group">
