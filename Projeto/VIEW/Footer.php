@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Footer -->
- <footer class="Footer" style="background-color: #ffb509;">
+ <footer class="Footer" style="background-color: #ffb509; margin-top: 150px">
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
             style="background-color: #f5f5ff;"></section>
 
