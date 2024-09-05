@@ -26,11 +26,12 @@ DROP TABLE IF EXISTS `agenda`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `agenda` (
   `idagenda` int NOT NULL AUTO_INCREMENT,
-  `numero` int NOT NULL,
-  `descricao` varchar(45) NOT NULL,
-  `ra` int DEFAULT NULL,
-  `nome` varchar(60) DEFAULT NULL,
-  `emuso` tinyint NOT NULL,
+  `chave` int NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `nomeUsuario` varchar(60) DEFAULT NULL,
+  `emuso` varchar(25) NOT NULL,
+  `acontecimento` varchar(50) DEFAULT NULL,
+  `especificar` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`idagenda`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,36 +42,8 @@ CREATE TABLE `agenda` (
 
 LOCK TABLES `agenda` WRITE;
 /*!40000 ALTER TABLE `agenda` DISABLE KEYS */;
-INSERT INTO `agenda` VALUES (1,1,'Biblioteca',NULL,NULL,0),(2,2,'Auditório',NULL,NULL,0),(3,3,'Projeção e áudio',NULL,NULL,0),(4,4,'Almoxarifado',NULL,NULL,0),(5,5,'Administrativo',NULL,NULL,0),(6,6,'DML',NULL,NULL,0),(7,7,'Espaço docente',NULL,NULL,0),(8,102,'Sala de aula',NULL,NULL,0),(9,103,'Sala de aula',NULL,NULL,0),(10,104,'Cozinha didática',NULL,NULL,0),(11,105,'Estética',NULL,NULL,0),(12,106,'Salão Escola',NULL,NULL,0),(13,201,'Sala de aula',NULL,NULL,0),(14,202,'Sala de aula',NULL,NULL,0),(15,203,'Sala de aula',NULL,NULL,0),(16,204,'Lab. Informática',NULL,NULL,0),(17,205,'Estética',NULL,NULL,0),(18,206,'Estética',NULL,NULL,0),(19,207,'Lab. Informática',NULL,NULL,0),(20,208,'Sala de aula',NULL,NULL,0),(21,209,'Sala de aula',NULL,NULL,0),(22,210,'Lab. Informática',NULL,NULL,0);
+INSERT INTO `agenda` VALUES (1,1,'Biblioteca','Jeff Feng','Disponível',NULL,NULL),(2,2,'Auditório',NULL,'Disponível',NULL,NULL),(3,3,'Projeção e áudio',NULL,'Disponível',NULL,NULL),(4,4,'Almoxarifado','Leon Martins','Não disponível',NULL,NULL),(5,5,'Administrativo',NULL,'Disponível',NULL,NULL),(6,6,'DML',NULL,'Disponível',NULL,NULL),(7,7,'Espaço docente',NULL,'Disponível',NULL,NULL),(8,102,'Sala de aula',NULL,'Disponível',NULL,NULL),(9,103,'Sala de aula',NULL,'Disponível',NULL,NULL),(10,104,'Cozinha didática',NULL,'Disponível',NULL,NULL),(11,105,'Estética',NULL,'Disponível',NULL,NULL),(12,106,'Salão Escola',NULL,'Disponível',NULL,NULL),(13,201,'Sala de aula',NULL,'Disponível',NULL,NULL),(14,202,'Sala de aula',NULL,'Disponível',NULL,NULL),(15,203,'Sala de aula',NULL,'Disponível',NULL,NULL),(16,204,'Lab. Informática',NULL,'Disponível',NULL,NULL),(17,205,'Estética',NULL,'Disponível',NULL,NULL),(18,206,'Estética',NULL,'Disponível',NULL,NULL),(19,207,'Lab. Informática',NULL,'Disponível',NULL,NULL),(20,208,'Sala de aula',NULL,'Disponível',NULL,NULL),(21,209,'Sala de aula',NULL,'Disponível',NULL,NULL),(22,210,'Lab. Informática',NULL,'Disponível',NULL,NULL);
 /*!40000 ALTER TABLE `agenda` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cadastro`
---
-
-DROP TABLE IF EXISTS `cadastro`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cadastro` (
-  `idcadastro` int NOT NULL AUTO_INCREMENT,
-  `numero` int NOT NULL,
-  `descricao` varchar(45) NOT NULL,
-  `ra` int DEFAULT NULL,
-  `nome` varchar(60) DEFAULT NULL,
-  `gerencia` tinyint DEFAULT NULL,
-  PRIMARY KEY (`idcadastro`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cadastro`
---
-
-LOCK TABLES `cadastro` WRITE;
-/*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
-INSERT INTO `cadastro` VALUES (1,0,'Biblioteca',NULL,NULL,0),(2,0,'Auditório',NULL,NULL,0),(3,0,'Projeção e áudio',NULL,NULL,0),(4,0,'Almoxarifado',NULL,NULL,0),(5,0,'Administrativo',NULL,NULL,0),(6,0,'DML',NULL,NULL,0),(7,0,'Espaço docente',NULL,NULL,0),(8,102,'Sala de aula',NULL,NULL,0),(9,103,'Sala de aula',NULL,NULL,0),(10,104,'Cozinha didática',NULL,NULL,0),(11,105,'Estética',NULL,NULL,0),(12,106,'Salão Escola',NULL,NULL,0),(13,201,'Sala de aula',NULL,NULL,0),(14,202,'Sala de aula',NULL,NULL,0),(15,203,'Sala de aula',NULL,NULL,0),(16,204,'Lab. Informática',NULL,NULL,0),(17,205,'Estética',NULL,NULL,0),(18,206,'Estética',NULL,NULL,0),(19,207,'Lab. Informática',NULL,NULL,0),(20,208,'Sala de aula',NULL,NULL,0),(21,209,'Sala de aula',NULL,NULL,0),(22,210,'Lab. Informática',NULL,NULL,0);
-/*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -111,13 +84,14 @@ DROP TABLE IF EXISTS `historicochave`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `historicochave` (
   `idhistoricoChave` int NOT NULL AUTO_INCREMENT,
-  `chave` varchar(45) NOT NULL,
+  `chave` varchar(45) DEFAULT NULL,
   `nome` varchar(55) NOT NULL,
   `data` date NOT NULL,
   `hora` time NOT NULL,
   `nomeUsuario` varchar(60) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idhistoricoChave`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +100,7 @@ CREATE TABLE `historicochave` (
 
 LOCK TABLES `historicochave` WRITE;
 /*!40000 ALTER TABLE `historicochave` DISABLE KEYS */;
-INSERT INTO `historicochave` VALUES (2,'7','Espaço docente','2024-08-30','09:41:00','Gabriel Marmota'),(3,'2','Auditório','2024-09-01','09:41:00','Gabriel Marmota');
+INSERT INTO `historicochave` VALUES (1,'4','Almoxarifado','2024-09-05','11:36:00','Leon Martins','Chave retirada');
 /*!40000 ALTER TABLE `historicochave` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,7 +127,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `cpf_UNIQUE` (`cpf`),
   UNIQUE KEY `ra_UNIQUE` (`ra`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -162,7 +136,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (2,'Igor Apareceu','igorc#@gmail.com','1234','1234567','R.Abelha, 22','JF City','AC','123456789','123456789',NULL),(3,'Gabriel Marmota','tantofaz@gmail.com','1234','1234','R. Fim Do Mundo , 69','Jf City','BA','3232232','111.111.111-11',NULL),(4,'Fernandinho ','fernando@gmail.com','1234','123456','Vancuver, Canada','rio de janeiro','AC','32323-2','999.999.999-99',NULL),(5,'coisa de nerd2','tarcisio@gmail.com','1234','123423','Vancuver, Canada','rio de janeiro','AC','32323-2','121.231.321-32',NULL),(7,'gente doido ','gerencia@gmail.com','1234','2345','paulo alto, california','rio de janeiro','AC','32323-2','400.289.221-23',1);
+INSERT INTO `usuario` VALUES (1,'Leon Martins','coisadenerd@gmail.com','1234','111111','Santo Agostinho, Jardim das Américas, 22','Volta Redonda','RJ','27260-000','023.681.186-09',1),(2,'Nilce Moretto','nilmoretto@gmail.com','1234','222222','Jardim do Trevo, Rua José de Alencar, 44','Birigui','SP','16200-000','321.458.981-71',1),(3,'Jeff Feng','pokejeff@outlook.com','1234','333333','Bolo, de Cenoura, 16','Cidade dos bolos','AC','21421-849','423.817.382-17',NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,4 +157,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-30 10:16:39
+-- Dump completed on 2024-09-05 11:41:13
