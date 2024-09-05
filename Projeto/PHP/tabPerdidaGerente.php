@@ -2,45 +2,37 @@
     session_start();
     include 'database.php';
 
-
     $sql = "SELECT * FROM agenda WHERE emuso LIKE '%Perdida%'";
     $results = '';
+
     if(isset($_POST['agendar_id'])){
         $idChave = $_POST['agendar_id'];
 
-        $acontecimento = "";
-        $especificar = "";
-        $nomeUsuario = "";
+        // Inicializa variáveis
+        $acontecimento = empty($_POST['acontecimento']) ? null : $_POST['acontecimento'];
+        $especificar = empty($_POST['especificar']) ? null : $_POST['especificar'];
+        $nomeUsuario = empty($_POST['nomeUsuario']) ? null : $_POST['nomeUsuario'];
         $emuso = "Disponível";
 
-        /*$numChave = filter_input(INPUT_POST, 'numChave', FILTER_SANITIZE_STRING);
-        $nome = filter_input(INPUT_POST, 'nomeSala', FILTER_SANITIZE_STRING);
-        $data = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_STRING);
-        $hora = filter_input(INPUT_POST, 'hora', FILTER_SANITIZE_STRING);
-        $nomeUsuario = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-        $emuso = filter_input(INPUT_POST, 'emuso', FILTER_SANITIZE_STRING);
-        $idsala = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);*/
+        // Corrige a variável usada para a atualização
+        $declaracaoBD = $conexao->prepare("UPDATE `agenda` SET `acontecimento` = ?, `especificar` = ?, `emuso` = ?, `nomeUsuario` = ? WHERE `idagenda` = ?");
+        $declaracaoBD->bind_param("ssssi", $acontecimento, $especificar, $emuso, $nomeUsuario, $idChave);
 
-        $declaracaoBD = $conexao -> prepare("UPDATE `agenda` SET  `acontecimento` = ? , `especificar` = ? , `emuso` = ?, `nomeUsuario` = ? WHERE `idagenda` = ?");
-        $declaracaoBD -> bind_param("ssssi", $acontecimento, $especificar, $emuso, $nomeUsuario, $idsala);
-
-        if ($declaracaoBD -> execute()){
+        if ($declaracaoBD->execute()) {
             echo "<script>
-                    alert('Perfeito! Agora você pode pegar sua chave!');
+                    alert('Chave reposta com sucesso. Agora ela está disponível novamente!');
                     window.location.href = '../VIEW/tabelaPerdidaGerente.php';
-                </script>;";
+                </script>";
+            exit();
+        } else {
+            echo "Erro ao realizar o agendamento da chave: ". $declaracaoBD->error;
         }
-        else{
-           echo "Erro ao realizar o agendamento da chave: ". $declaracaoBD->error;
-       }
-    exit();
-        }
-    
+    }
+
     $resultado = $conexao->query($sql);
-    if ($resultado -> num_rows > 0){
-        while ($linha = $resultado -> fetch_assoc()){
-            if($linha['emuso'] === 'Perdida'){
-                //$disabled = $linha['emuso'] === 'Perdida' ? 'disabled' : '';
+    if ($resultado->num_rows > 0) {
+        while ($linha = $resultado->fetch_assoc()) {
+            if($linha['emuso'] === 'Perdida') {
                 $results .= "<tr>
                     <td>{$linha['chave']}</td>
                     <td>{$linha['nome']}</td>
@@ -50,22 +42,15 @@
                         <input type='hidden' name='agendar_id' value='{$linha['idagenda']}'>
                         <button type='submit' name='agendar' style='background-color: #ffb509;'>Chave Encontrada</button>
                     </form></td>                            
-                </tr>";                       
-
+                </tr>";
             }
         }
-    }
-
-    else{
-        $results = "<tr>
-                        <td colspan = '5'>Nenhuma chave encontrada</td>
-                    </tr>";                        
+    } else {
+        $results = "<tr><td colspan='5'>Nenhuma chave encontrada</td></tr>";
     }
 
     $_SESSION['tabPerdidaGerente'] = $results;
-    $conexao -> close();
-    header ("Location: ../VIEW/tabelaPerdidaGerente.php?");
+    $conexao->close();
+    header("Location: ../VIEW/tabelaPerdidaGerente.php");
     exit();
-    
 ?>
-
