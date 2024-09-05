@@ -48,9 +48,9 @@
         $numero = '';
         $andar = '';
         $descricao = '';
-
         $acontecimento = '';
         $especificar = '';
+        $status = "Chave Perdida";
         $emuso = 'Perdida';
         
         // Verifica se um ID foi passado na URL
@@ -86,6 +86,7 @@
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
             <input type="hidden" name="emuso" value="<?php echo $emuso; ?>">
+            <input type="hidden" name="status" value="<?php echo $status; ?>">
 
             <div class="form-group">
                 <label for="numSala">Número da sala</label>
@@ -124,6 +125,15 @@
                 <textarea class="form-control" name="especificar" id="exampleInputPassword1" placeholder="Como perdeu a chave?" rows="4" cols="30" required value="<?php echo htmlspecialchars($especificar); ?>"></textarea>
             </div>
 
+            <div class="form-group">
+                <label for="data">Dia</label>
+                <input type="date" readonly name="data" id="dataField" class="form-control" >
+            </div>
+
+            <div class="form-group">
+                <label for="time">Hora de Inicio</label>
+                <input type="time" readonly name="hora" id="horaField" class="form-control">
+            </div>
 
             <div id="idButton">
                 <button type="submit" name="Enviar" class="btn btn-primary">ENVIAR</button>
@@ -144,6 +154,23 @@
         function mascaraSala(Sala) {
             Sala.value = Sala.value.replace(/\D/g, "")
         }
+    </script>
+
+    <script>
+        // Puxar a data do sistema
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById('dataField').value = today;
+        });
+
+        // Puxando a hora do sistema
+        document.addEventListener('DOMContentLoaded', function() {
+        var now = new Date();
+        var hours = String(now.getHours()).padStart(2, '0');
+        var minutes = String(now.getMinutes()).padStart(2, '0');
+        var currentTime = hours + ':' + minutes;
+        document.getElementById('horaField').value = currentTime;
+    });
     </script>
 
     <!-- script -->
