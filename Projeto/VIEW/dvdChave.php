@@ -50,6 +50,7 @@
         $andar = '';
         $descricao = '';
         $emuso = 'Disponível';
+        $status = "Chave devolvida";
         
         // Verifica se um ID foi passado na URL
         if (isset($_GET['id'])) {
@@ -83,6 +84,7 @@
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="nome" value="<?php echo $nomeUsuario; ?>">
             <input type="hidden" name="emuso" value="<?php echo $emuso; ?>">
+            <input type="hidden" name="status" value="<?php echo $status; ?>">
 
             <div class="form-group">
                 <label for="numSala">Número da sala</label>
@@ -147,46 +149,6 @@
         var currentTime = hours + ':' + minutes;
         document.getElementById('horaField').value = currentTime;
     });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Função para obter o valor do parâmetro "id" da URL
-            function getParameterByName(name, url = window.location.href) {
-                name = name.replace(/[\[\]]/g, '\\$&');
-                const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                    results = regex.exec(url);
-                if (!results) return null;
-                if (!results[2]) return '';
-                return decodeURIComponent(results[2].replace(/\+/g, ' '));
-            }
-
-            // Obtém o valor do parâmetro "id"
-            const id = getParameterByName('id');
-            
-            // Se o ID for 1, 2 ou 3, habilita os campos "data" e "hora" e mostra o ícone de interrogação
-            if (['1', '2', '3'].includes(id)) {
-                document.getElementById('dataField').removeAttribute('readonly');
-                document.getElementById('horaField').removeAttribute('readonly');
-                
-                // Define a data mínima para o campo "data" como dois dias a partir da data atual
-                const today = new Date();
-                const minDate = new Date(today.setDate(today.getDate() + 2));
-                const minDateString = minDate.toISOString().split('T')[0];
-                document.getElementById('dataField').setAttribute('min', minDateString);
-
-                // Mostra o ícone de interrogação
-                document.getElementById('question-icon').style.display = 'inline';
-            } else {
-                // Se o ID não for 1, 2 ou 3, garante que os campos estejam bloqueados e oculta o ícone de interrogação
-                document.getElementById('dataField').setAttribute('readonly', 'readonly');
-                document.getElementById('horaField').setAttribute('readonly', 'readonly');
-                document.getElementById('question-icon').style.display = 'none';
-            }
-            
-            // Inicializa os tooltips do Bootstrap
-            $('[data-toggle="tooltip"]').tooltip();
-        });
     </script>
 
     <!-- script -->
