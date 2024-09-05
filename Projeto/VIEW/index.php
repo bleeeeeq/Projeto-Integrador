@@ -54,12 +54,15 @@
             <p>Escolha o que deseja fazer:</p>
         </div>
 
-        <div id="ItensMenu">
-            <a href="registroChaves.php">Pegar chave</a>
-            <a href="devolverChave.php">Devolver chave</a>
-            <a href="historico.php">Historico de chaves</a>
-            <a href="cadUsuario.php">Cadastrar Usuário</a>
-        </div>
+        <?php
+    if (isset($_SESSION['gerencia']) && $_SESSION['gerencia'] == 1) {
+
+        include_once "menuGerente.php";
+
+    } else {
+        include_once "menuUsuario.php";
+    }
+    ?>
     </main>
     <!--menu-->
 
