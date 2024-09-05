@@ -36,10 +36,23 @@
                     <a class="nav-link" href="cadUsuario.php">Cadastro Usuário<span class="sr-only"></span></a>
                 </li>
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="historico.php">Histórico de chaves<span class="sr-only"></span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chaves
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="registroChaves.php">Pegar uma chave</a>
+                        <a class="dropdown-item" href="devolverChave.php">Devolver uma chave</a>
+                        <a class="dropdown-item" href="esqueciChave.php">Perdi uma chave</a>
+                        <a class="dropdown-item" href="historico.php">Histórico de chave</a>
+                    </div>
                 </li>
-
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../PHP/sair.php">Sair<span class="sr-only"></span></a>
+                </li>
             </ul>
         </div>
     </nav>

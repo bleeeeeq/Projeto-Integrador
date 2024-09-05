@@ -34,10 +34,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="FAQ.php">Perguntas Frequentes</a>
                 </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="cadUsuario.php">Cadastro</a>
-                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -50,7 +46,11 @@
                         <a class="dropdown-item" href="esqueciChave.php">Perdi uma chave</a>
                     </div>
                 </li>
-
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../PHP/sair.php">Sair<span class="sr-only"></span></a>
+                </li>
             </ul>
         </div>
     </nav>
