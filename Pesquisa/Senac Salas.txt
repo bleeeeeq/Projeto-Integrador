@@ -23,8 +23,6 @@ Espaço docente
 
 [2° andar]
 
-DML
-
 201 - Sala de aula
 202 - Sala de aula
 203 - Sala de aula
